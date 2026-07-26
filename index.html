@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💕 CBT Exam – For Peter Ifeoma Judith</title>
-    <meta name="description" content="Personalized CBT exam with auto-saved history and score tracking." />
+    <title>💕 Tough CBT Exam – For Peter Ifeoma Judith</title>
+    <meta name="description" content="50 tough research exam questions with auto-saved history." />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
 
     <!-- Bootstrap 5 + Icons -->
@@ -396,7 +396,7 @@
             margin-bottom: 12px;
         }
         .question-text {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: 24px;
@@ -651,7 +651,7 @@
             margin-right: auto;
         }
 
-        /* ─── History modal / panel ─── */
+        /* ─── History panel ─── */
         .history-panel {
             display: none;
             background: #fff;
@@ -750,7 +750,7 @@
                 font-size: 0.75rem;
             }
             .question-text {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             .welcome-box h1 {
                 font-size: 1.7rem;
@@ -780,7 +780,6 @@
                 display: none !important;
             }
         }
-        /* scroll */
         .palette-grid {
             max-height: 160px;
             overflow-y: auto;
@@ -825,9 +824,9 @@
                     <h1 id="welcomeTitle">
                         For <span class="name-highlight">Peter Ifeoma Judith</span> 💕
                     </h1>
-                    <p class="sub">✨ Research Methods · 50 Questions · 60 Minutes ✨</p>
+                    <p class="sub">✨ Research Methods · 50 Tough Questions · 60 Minutes ✨</p>
                     <div class="quote">
-                        <i>“</i> Sorry for forgetting our monthly anniversary… let me make it up to you with this exam. <i>”</i>
+                        <i>“</i> Sorry for forgetting our monthly anniversary… let me make it up to you with this tough exam. <i>”</i>
                         <br /><span style="font-size:0.8rem;color:var(--gray-600);">— With love, always ❤️</span>
                     </div>
                     <label for="candidateName" class="form-label fw-semibold" style="color:var(--gray-800);">
@@ -849,7 +848,7 @@
                 <!-- Header -->
                 <header class="exam-header">
                     <div class="exam-title">
-                        💕 CBT Exam
+                        💕 Tough CBT
                         <span class="heart-small">❤️</span>
                         <span class="candidate" id="candidateDisplay">—</span>
                     </div>
@@ -859,7 +858,7 @@
                         </button>
                         <div class="timer-box" id="timerBox" role="timer" aria-live="polite">
                             <i class="bi bi-clock" aria-hidden="true"></i>
-                            <span class="time" id="timerDisplay">30:00</span>
+                            <span class="time" id="timerDisplay">60:00</span>
                         </div>
                     </div>
                 </header>
@@ -904,7 +903,7 @@
                     <div class="palette-grid" id="paletteGrid" role="list"></div>
                 </section>
 
-                <!-- Results (hidden initially) -->
+                <!-- Results -->
                 <div id="resultsContainer" style="display:none;" class="result-box fade-transition" role="region" aria-live="polite">
                     <div class="score-circle">
                         <span class="heart-badge">💕</span>
@@ -931,9 +930,7 @@
                         <span><i class="bi bi-clock-history"></i> Score History</span>
                         <button class="btn btn-outline-secondary btn-sm" id="closeHistoryBtn" style="border-radius:40px;padding:4px 14px;">Close</button>
                     </h3>
-                    <div id="historyContent">
-                        <!-- injected by JS -->
-                    </div>
+                    <div id="historyContent"></div>
                 </div>
 
             </div><!-- /exam-ui -->
@@ -942,508 +939,508 @@
 
     <script>
         /* ============================================================
-           CBT EXAM – Apology Edition with Auto‑saved History
+           TOUGH CBT EXAM – 50 challenging questions
            ============================================================ */
 
-        // ─── 50 QUESTIONS (same) ───
+        // ─── 50 TOUGH QUESTIONS based on the research document ───
         const QUESTIONS = [{
             id: 1,
-            text: 'Research can best be described as:',
+            text: 'Which of the following BEST captures the essence of research as described in the document?',
             options: [
-                'A) A casual process of gathering information',
+                'A) A casual process of gathering opinions from colleagues',
                 'B) A systematic, organized, and controlled process involving observations and analysis to discover truth',
-                'C) Reading books and articles on a topic',
-                'D) Collecting opinions from friends and colleagues'
+                'C) A theoretical exercise with no practical application',
+                'D) A method of proving pre-existing beliefs'
             ],
             correct: 1
         }, {
             id: 2,
-            text: 'The purpose of research is to:',
+            text: 'The document states that research serves a dual purpose. Which pair BEST represents this duality?',
             options: [
-                'A) Confirm what is already known',
-                'B) Develop, refine, and expand a body of knowledge',
-                'C) Make researchers famous',
-                'D) Fulfill academic requirements only'
+                'A) Process and outcome',
+                'B) Theory and practice',
+                'C) Observation and experimentation',
+                'D) Qualitative and quantitative'
             ],
-            correct: 1
+            correct: 0
         }, {
             id: 3,
-            text: 'Which of the following best defines an "abstract"?',
+            text: 'According to the document, the ultimate goal of research is to:',
             options: [
-                'A) A detailed explanation of methodology',
-                'B) A synopsis of the entire work that gives a clear idea of the work at a glance',
-                'C) A list of references used in the study',
-                'D) The conclusion section of a research paper'
+                'A) Publish findings in academic journals',
+                'B) Establish a scientific base of knowledge fundamental to practice',
+                'C) Gain recognition among peers',
+                'D) Fulfill academic requirements'
             ],
             correct: 1
         }, {
             id: 4,
-            text: '"Bias" in research refers to:',
+            text: 'Which of the following statements about "conceptualization" is TRUE according to the document?',
             options: [
-                'A) A researcher\'s personal opinion',
-                'B) Any influence that produces distortion in the results of a study',
-                'C) The hypothesis of the study',
-                'D) The sampling technique used'
+                'A) It is the process of collecting data from respondents',
+                'B) It is the process of forming ideas, plans, and designs',
+                'C) It is synonymous with operational definition',
+                'D) It refers to testing a hypothesis'
             ],
             correct: 1
         }, {
             id: 5,
-            text: 'What is a "concept" in research terms?',
+            text: 'The document distinguishes between "construct" and "concept." Which of the following is a construct?',
             options: [
-                'A) A proven fact',
-                'B) An abstract idea based on observations of certain behaviours or characteristics',
-                'C) The final conclusion of a study',
-                'D) A statistical measurement'
+                'A) Height',
+                'B) Weight',
+                'C) Self-care',
+                'D) Temperature'
             ],
-            correct: 1
+            correct: 2
         }, {
             id: 6,
-            text: 'A "construct" in research is best described as:',
+            text: '"Ex post facto" research is characterized by:',
             options: [
-                'A) A concrete object being studied',
-                'B) An abstract or concept deliberately invented by the researcher for a specific purpose',
-                'C) The control group in an experiment',
-                'D) The dependent variable'
+                'A) Manipulation of variables before the experiment',
+                'B) Confirmation of results after the experiment or from previous data',
+                'C) Use of control groups only',
+                'D) Random assignment of subjects'
             ],
             correct: 1
         }, {
             id: 7,
-            text: '"Data" in research refers to:',
+            text: 'The "Hawthorne effect" occurs when:',
             options: [
-                'A) Only numerical information',
-                'B) Facts or evidence obtained from observation or experiment',
-                'C) The researcher\'s personal notes',
-                'D) The literature review section'
+                'A) Researchers introduce bias into their analysis',
+                'B) Subjects change their behavior because they are aware of being observed',
+                'C) The sample size is too small to detect significance',
+                'D) Instruments fail to measure what they intend to'
             ],
             correct: 1
         }, {
             id: 8,
-            text: '"Reliability" of an instrument refers to:',
+            text: 'Which of the following terms refers to the process of applying sample characteristics to the general population?',
             options: [
-                'A) Whether it measures what it is supposed to measure',
-                'B) The degree of consistency — getting the same answer any time it is applied',
-                'C) The cost of the instrument',
-                'D) The length of the instrument'
+                'A) Operationalization',
+                'B) Inference',
+                'C) Conceptualization',
+                'D) Randomization'
             ],
             correct: 1
         }, {
             id: 9,
-            text: '"Validity" in research refers to:',
+            text: 'The document defines a "law" as:',
             options: [
-                'A) The degree to which an instrument reflects what it is supposed to measure',
-                'B) How many people participated in the study',
-                'C) The researcher\'s qualifications',
-                'D) The number of references cited'
+                'A) A hypothesis that has been tested once',
+                'B) A theory that has been thoroughly tested and has become certain',
+                'C) An untested assumption',
+                'D) A researcher\'s personal belief'
             ],
-            correct: 0
+            correct: 1
         }, {
             id: 10,
-            text: '"Plagiarism" is defined as:',
+            text: '"Response set bias" is best described as:',
             options: [
-                'A) Properly citing sources',
-                'B) Copying another person\'s work or idea while pretending to be the originator',
-                'C) Conducting original research',
-                'D) Using statistical analysis'
+                'A) Bias introduced by the researcher during data collection',
+                'B) Measurement error introduced when individuals respond to items in characteristic ways regardless of content',
+                'C) Bias from selecting a non-representative sample',
+                'D) Bias from poorly worded questions'
             ],
             correct: 1
         }, {
             id: 11,
-            text: 'A "variable" in research is defined as:',
+            text: 'A researcher is studying the effect of a new teaching method on student performance. In this study, student performance is the:',
             options: [
-                'A) Something that remains constant',
-                'B) Anything that varies in its characteristics and can take more than one value',
-                'C) The research problem',
-                'D) The literature review'
+                'A) Independent variable',
+                'B) Dependent variable',
+                'C) Moderator variable',
+                'D) Extraneous variable'
             ],
             correct: 1
         }, {
             id: 12,
-            text: 'The independent variable is:',
+            text: 'Which scenario BEST illustrates a moderator variable?',
             options: [
-                'A) The outcome or effect being measured',
-                'B) The presumed cause of a situation or event',
-                'C) A variable that is not relevant to the study',
-                'D) The control group'
+                'A) Smoking causes lung cancer',
+                'B) Mother\'s age affects birth weight, and antenatal care influences this relationship',
+                'C) Teaching method affects student performance',
+                'D) Height is correlated with weight'
             ],
             correct: 1
         }, {
             id: 13,
-            text: 'The dependent variable is:',
+            text: 'In a study on the relationship between mother\'s age and infant diarrhea, the availability of clean water is an example of a(n):',
             options: [
-                'A) The presumed cause',
-                'B) The pressured effect or outcome variable',
-                'C) The experimental group',
-                'D) The research design'
+                'A) Independent variable',
+                'B) Dependent variable',
+                'C) Extraneous variable',
+                'D) Dichotomous variable'
             ],
-            correct: 1
+            correct: 2
         }, {
             id: 14,
-            text: 'In a study examining the effect of smoking on lung cancer, smoking is the:',
+            text: 'Which of the following is BOTH a continuous and a categorical variable depending on how it is measured?',
             options: [
-                'A) Dependent variable',
-                'B) Independent variable',
-                'C) Extraneous variable',
-                'D) Moderator variable'
+                'A) Age',
+                'B) Sex',
+                'C) Blood group',
+                'D) Marital status'
             ],
-            correct: 1
+            correct: 0
         }, {
             id: 15,
-            text: 'A "dichotomous variable" is one that:',
+            text: 'A researcher categorizes participants into "urban" and "rural" groups. This is an example of a:',
             options: [
-                'A) Has infinite values',
-                'B) Takes on only two values (e.g., male/female)',
-                'C) Has more than two categories',
-                'D) Is continuous in nature'
+                'A) Continuous variable',
+                'B) Dichotomous variable',
+                'C) Discrete variable',
+                'D) Heterogeneous variable'
             ],
             correct: 1
         }, {
             id: 16,
-            text: 'Which of the following is an example of a "continuous variable"?',
+            text: 'When a variable can assume infinite values between two points (e.g., height, weight), it is called a:',
             options: [
-                'A) Sex (male/female)',
-                'B) Blood group (A, B, AB, O)',
-                'C) Age',
-                'D) Marital status'
+                'A) Discrete variable',
+                'B) Categorical variable',
+                'C) Continuous variable',
+                'D) Dichotomous variable'
             ],
             correct: 2
         }, {
             id: 17,
-            text: 'A "categorical variable" is characterized by:',
+            text: 'The document describes "heterogeneous variable" as:',
             options: [
-                'A) Having infinite values',
-                'B) Taking on a small range of values that do not represent a quantity',
-                'C) Being measured on a continuous scale',
-                'D) Having no categories'
+                'A) A variable that takes on only two values',
+                'B) A situation where a group consists of many different kinds with respect to a particular attribute',
+                'C) A variable that has limited variability',
+                'D) A variable that remains constant across subjects'
             ],
             correct: 1
         }, {
             id: 18,
-            text: '"Extraneous variables" are:',
+            text: 'Which of the following is an example of a discrete variable?',
             options: [
-                'A) Variables that are purposely manipulated',
-                'B) Variables that exist and compete in the relationship between dependent and independent variables',
-                'C) The main variables of interest',
-                'D) Variables that are never measured'
+                'A) Temperature in degrees Celsius',
+                'B) Number of patients in a ward',
+                'C) Weight in kilograms',
+                'D) Height in centimeters'
             ],
             correct: 1
         }, {
             id: 19,
-            text: 'A "moderator variable" is one that:',
+            text: 'In a study examining the relationship between a mother\'s education level and child\'s nutritional status, the mother\'s education is the:',
             options: [
-                'A) Has no effect on the study',
-                'B) Moderates between the dependent and independent variable',
-                'C) Is the same as the independent variable',
-                'D) Is always categorical'
+                'A) Dependent variable',
+                'B) Independent variable',
+                'C) Moderator variable',
+                'D) Extraneous variable'
             ],
             correct: 1
         }, {
             id: 20,
-            text: 'Which of the following is a "dichotomous variable"?',
+            text: 'The document states that nearly all aspects of human beings and their environment vary. This is the fundamental basis for:',
             options: [
-                'A) Age in years',
-                'B) Height in centimeters',
-                'C) Gender (male/female)',
-                'D) Weight in kilograms'
+                'A) Experimental control',
+                'B) The concept of variables',
+                'C) Random sampling',
+                'D) Statistical significance'
             ],
-            correct: 2
+            correct: 1
         }, {
             id: 21,
-            text: 'Basic (Pure) research is:',
+            text: 'What is the PRIMARY distinction between basic and applied research according to the document?',
             options: [
-                'A) Designed to solve immediate problems',
-                'B) Used to generate new knowledge or formulate theories',
-                'C) Always quantitative',
-                'D) Never used in nursing'
+                'A) Basic research uses animals while applied uses humans',
+                'B) Basic research generates knowledge; applied research solves existing problems',
+                'C) Basic research is quantitative; applied is qualitative',
+                'D) Basic research is conducted in laboratories; applied in natural settings'
             ],
             correct: 1
         }, {
             id: 22,
-            text: 'Applied research focuses on:',
+            text: 'The document states that basic and applied research "reciprocate each other." This means:',
             options: [
-                'A) Generating new theories',
-                'B) Finding solutions to existing problems',
-                'C) Historical analysis only',
-                'D) Testing random hypotheses'
+                'A) They are completely independent of each other',
+                'B) They complement and feed into each other in generation and application of knowledge',
+                'C) One is superior to the other',
+                'D) They should never be combined in a single study'
             ],
             correct: 1
         }, {
             id: 23,
-            text: 'Experimental research is characterized by:',
+            text: 'Experimental research is characterized by all of the following EXCEPT:',
             options: [
-                'A) No control group',
-                'B) Manipulation of variables, control group, and randomization',
-                'C) Only observational methods',
-                'D) No intervention'
+                'A) Manipulation of independent variables',
+                'B) Control over the experimental group',
+                'C) Randomization of subjects',
+                'D) Absence of a control group'
+            ],
+            correct: 3
+        }, {
+            id: 24,
+            text: 'Quasi-experimental design differs from true experimental design primarily because it:',
+            options: [
+                'A) Always uses larger sample sizes',
+                'B) Lacks control group and randomization',
+                'C) Cannot be used in nursing research',
+                'D) Only uses qualitative methods'
             ],
             correct: 1
         }, {
-            id: 24,
-            text: 'Quasi-experimental design differs from true experimental design because it:',
-            options: [
-                'A) Has no control group and no randomization',
-                'B) Cannot be used in nursing',
-                'C) Always has a control group',
-                'D) Is only used in laboratory settings'
-            ],
-            correct: 0
-        }, {
             id: 25,
-            text: 'A "survey" research design deals with:',
+            text: 'Which of the following is a type of quasi-experimental design mentioned in the document?',
             options: [
-                'A) Collecting data from a group of people to ascertain their interests, opinions, and beliefs',
-                'B) Conducting laboratory experiments',
-                'C) Analyzing historical documents',
-                'D) Studying a single individual'
+                'A) Cross-sectional survey',
+                'B) Single group design',
+                'C) Case study',
+                'D) Historical research'
             ],
-            correct: 0
+            correct: 1
         }, {
             id: 26,
-            text: '"Longitudinal survey" refers to:',
+            text: 'A researcher collects data from a group of mothers at one point in time to determine their attitudes toward exclusive breastfeeding. This is an example of:',
             options: [
-                'A) Collecting data at one point in time',
-                'B) Collecting data at more than one point in time',
-                'C) A survey that never ends',
-                'D) A survey with no participants'
+                'A) Longitudinal survey',
+                'B) Cross-sectional survey',
+                'C) Experimental design',
+                'D) Historical research'
             ],
             correct: 1
         }, {
             id: 27,
-            text: '"Cross-sectional survey" involves:',
+            text: 'Which research design would be MOST appropriate for studying changes in attitudes over a 10-year period?',
             options: [
-                'A) Collecting data over many years',
-                'B) Collection of data at one point in time',
-                'C) Following participants for decades',
-                'D) Experimental manipulation'
+                'A) Cross-sectional survey',
+                'B) Longitudinal survey',
+                'C) Experimental design',
+                'D) Case study'
             ],
             correct: 1
         }, {
             id: 28,
-            text: 'Descriptive research is aimed at:',
+            text: 'Descriptive research is described as providing a "factual descriptive picture" without "intellectual changes of inventing new ideas." This means descriptive research:',
             options: [
-                'A) Manipulating variables',
-                'B) Providing a factual descriptive picture of a situation',
-                'C) Establishing cause and effect',
-                'D) Testing hypotheses only'
+                'A) Never produces useful findings',
+                'B) Describes phenomena as they are without manipulating them',
+                'C) Always leads to new theories',
+                'D) Is less scientific than experimental research'
             ],
             correct: 1
         }, {
             id: 29,
-            text: 'Historical research involves:',
+            text: 'Historical research involves all of the following steps EXCEPT:',
             options: [
-                'A) Conducting experiments',
-                'B) Tracing events in life history and examining past events',
-                'C) Surveying current opinions',
-                'D) Predicting future events only'
+                'A) Comprehensive gathering of data through diaries, maps, and records',
+                'B) Criticism of data to determine authenticity',
+                'C) Manipulation of variables to test cause and effect',
+                'D) Determining relationships among facts and meaning of data'
             ],
-            correct: 1
+            correct: 2
         }, {
             id: 30,
-            text: 'A "case study" involves:',
+            text: 'A researcher conducts a study to investigate "whether HIV-positive clients are happier being told of their condition than not." This is an example of:',
             options: [
-                'A) Studying many cases at once',
-                'B) In-depth data collection relating to a person\'s present state and past experiences',
-                'C) A survey of a large population',
-                'D) Only quantitative data collection'
+                'A) Descriptive research',
+                'B) Exploratory research',
+                'C) Explanatory research',
+                'D) Historical research'
             ],
             correct: 1
         }, {
             id: 31,
-            text: 'A "pilot study" is:',
+            text: 'According to the document, the FIRST and most important step in the research process is:',
             options: [
-                'A) The main study',
-                'B) A small-scale study on a sample similar to those in the main study to test materials',
-                'C) A study conducted by students only',
-                'D) A study with no participants'
+                'A) Literature review',
+                'B) Data collection',
+                'C) Identification of the research problem',
+                'D) Hypothesis formulation'
             ],
-            correct: 1
+            correct: 2
         }, {
             id: 32,
-            text: '"Snowball sampling" refers to:',
+            text: 'Which of the following is NOT listed as a source of research problems in the document?',
             options: [
-                'A) Random selection of participants',
-                'B) Selection of participants by means of referrals from earlier participants',
-                'C) Selecting participants from a database',
-                'D) Using only one participant'
+                'A) Personal experience',
+                'B) Existing theories',
+                'C) Mass media',
+                'D) Researcher\'s intuition without evidence'
             ],
-            correct: 1
+            correct: 3
         }, {
             id: 33,
-            text: 'The "population" in research refers to:',
+            text: 'The document emphasizes that a research problem must be "narrowed down to a researchable form." This process involves:',
             options: [
-                'A) Only the sample selected',
-                'B) All elements/subjects or observations related to a particular phenomenon of interest',
-                'C) The control group only',
-                'D) The experimental group only'
+                'A) Making the problem broader to include more variables',
+                'B) Identifying key variables and making the problem specific enough to study',
+                'C) Eliminating all variables from consideration',
+                'D) Focusing only on ethical considerations'
             ],
             correct: 1
         }, {
             id: 34,
-            text: 'A "sample" is:',
+            text: 'Which of the following criteria is mentioned for evaluating research problems?',
             options: [
-                'A) The entire population',
-                'B) A portion of the population selected for study',
-                'C) The control group',
-                'D) The research instrument'
+                'A) The problem must be popular among researchers',
+                'B) The problem must have potential to contribute to the body of knowledge',
+                'C) The problem must guarantee positive results',
+                'D) The problem must be completely new with no prior research'
             ],
             correct: 1
         }, {
             id: 35,
-            text: '"Primary sources" of literature include:',
+            text: 'The document states that literature review helps the researcher to "be proactive." This means:',
             options: [
-                'A) Textbooks',
-                'B) Direct accounts from individuals who observed the phenomenon',
-                'C) Encyclopedias',
-                'D) Review articles'
+                'A) To wait for others to do the work first',
+                'B) To anticipate challenges and build on existing knowledge',
+                'C) To avoid reading previous studies',
+                'D) To focus only on secondary sources'
             ],
             correct: 1
         }, {
             id: 36,
-            text: '"Secondary sources" of literature include:',
+            text: 'A researcher reads a journal article that summarizes findings from multiple original studies. This article is BEST described as a:',
             options: [
-                'A) Original research reports',
-                'B) Textbooks and encyclopedias',
-                'C) Memos and speeches',
-                'D) Patient records'
+                'A) Primary source',
+                'B) Secondary source',
+                'C) Tertiary source',
+                'D) Original source'
             ],
             correct: 1
         }, {
             id: 37,
-            text: 'The "Hawthorne effect" occurs when:',
+            text: 'When citing more than three authors for the first time in the text, the document advises that you must:',
             options: [
-                'A) Researchers are biased',
-                'B) Subjects change their behaviour because they are aware of being observed',
-                'C) Instruments are unreliable',
-                'D) Data is missing'
+                'A) Write only the first author\'s name followed by "et al"',
+                'B) List all the last names of the authors',
+                'C) Omit the citation entirely',
+                'D) Use only the year of publication'
             ],
             correct: 1
         }, {
             id: 38,
-            text: 'An "operational definition" is:',
+            text: 'A "pilot study" is conducted PRIMARILY to:',
             options: [
-                'A) The dictionary definition of a term',
-                'B) The definition of a concept in terms of how it will be measured',
-                'C) A vague description',
-                'D) A definition from a textbook'
+                'A) Collect final data for the research',
+                'B) Test the materials and procedures before the main study',
+                'C) Publish preliminary findings',
+                'D) Replace the main study entirely'
             ],
             correct: 1
         }, {
             id: 39,
-            text: '"Inference" in research refers to:',
+            text: 'The document describes "operational definition" as:',
             options: [
-                'A) The conclusion of the study',
-                'B) The process of applying characteristics of the sample to the general population',
-                'C) The research question',
-                'D) The literature review'
+                'A) The dictionary definition of a term',
+                'B) Defining a concept in terms of the operations or procedures by which it will be measured',
+                'C) A vague description that cannot be measured',
+                'D) A definition that applies only in theoretical contexts'
             ],
             correct: 1
         }, {
             id: 40,
-            text: '"Parameter" refers to:',
+            text: 'Which of the following is a characteristic of a good hypothesis according to the document?',
             options: [
-                'A) A characteristic of a sample',
-                'B) A piece of information collected from a population',
-                'C) A research design',
-                'D) A statistical test'
+                'A) It must be broad and general',
+                'B) It must be consistent with an established theory',
+                'C) It must guarantee positive results',
+                'D) It should not specify relationships among variables'
             ],
             correct: 1
         }, {
             id: 41,
-            text: 'Nursing research is important because it:',
+            text: 'A researcher states: "There is no significant relationship between the level of education and health practice among women in Enugu metropolis." This is an example of a:',
             options: [
-                'A) Only serves academic purposes',
-                'B) Helps establish a scientific base of knowledge for nursing practice',
-                'C) Is not needed in modern nursing',
-                'D) Replaces clinical experience'
+                'A) Directional hypothesis',
+                'B) Null hypothesis (H₀)',
+                'C) Alternative hypothesis (Hₐ)',
+                'D) Non-directional hypothesis'
             ],
             correct: 1
         }, {
             id: 42,
-            text: 'Which of the following is NOT listed as a goal of nursing research?',
+            text: 'Which of the following would be considered a directional hypothesis?',
             options: [
-                'A) Find ways of increasing cost-effectiveness of nursing activities',
-                'B) Defend professional status',
-                'C) Increase nurses\' salaries',
-                'D) Problem solving'
+                'A) There is a relationship between smoking and lung cancer',
+                'B) Cigarette smokers are likely to die younger than non-smokers',
+                'C) There is no relationship between diet and health',
+                'D) Age affects health status'
             ],
-            correct: 2
+            correct: 1
         }, {
             id: 43,
-            text: 'According to the document, research contributes to nursing by:',
+            text: 'According to the document, a hypothesis functions to:',
             options: [
-                'A) Reducing the need for education',
-                'B) Promoting evidence-based practice and accountability',
-                'C) Eliminating the need for theories',
-                'D) Replacing clinical judgment'
+                'A) Provide the final conclusion of the study',
+                'B) Guide the researcher toward achieving stated objectives',
+                'C) Replace the research problem',
+                'D) Eliminate the need for data collection'
             ],
             correct: 1
         }, {
             id: 44,
-            text: 'Which of the following is a limitation of research according to the document?',
+            text: 'The document identifies "scientific accountability" as important for nursing practice. This is enhanced by:',
+            options: [
+                'A) Ignoring current literature',
+                'B) Reading current literature to keep abreast of issues',
+                'C) Relying solely on clinical experience',
+                'D) Avoiding research findings'
+            ],
+            correct: 1
+        }, {
+            id: 45,
+            text: 'The document states that nursing research helps nurses to accept professional responsibilities by:',
+            options: [
+                'A) Pointing out effectiveness and non-effectiveness of certain practices',
+                'B) Eliminating the need for clinical judgment',
+                'C) Reducing the cost of nursing education',
+                'D) Replacing evidence-based practice with tradition'
+            ],
+            correct: 0
+        }, {
+            id: 46,
+            text: 'According to the document, which of the following is NOT listed as a goal of nursing research?',
+            options: [
+                'A) Find ways of increasing cost effectiveness of nursing activities',
+                'B) Establish scientific defensive reasoning for all nursing activities',
+                'C) Increase nurses\' salaries',
+                'D) Discover evidence of weakness and strength in nursing'
+            ],
+            correct: 2
+        }, {
+            id: 47,
+            text: 'The document identifies "social relevance" as important for nursing because:',
+            options: [
+                'A) Health is a right and not a privilege',
+                'B) Nurses need to be popular',
+                'C) Research should be conducted in isolation',
+                'D) Social media is important for nursing'
+            ],
+            correct: 0
+        }, {
+            id: 48,
+            text: 'The document describes the "reductionism" characteristic of research as:',
+            options: [
+                'A) Sacrificing uniqueness of individual events to identify general relationships',
+                'B) Reducing the sample size to save time',
+                'C) Simplifying research questions beyond recognition',
+                'D) Eliminating all variables from the study'
+            ],
+            correct: 0
+        }, {
+            id: 49,
+            text: 'Which of the following is a limitation of research mentioned in the document?',
             options: [
                 'A) Too many qualified researchers',
-                'B) Human rights and moral/ethical considerations',
+                'B) Measurement problems in psychological dimensions',
                 'C) Excessive funding',
                 'D) Too much time available'
             ],
             correct: 1
         }, {
-            id: 45,
-            text: 'The "snowball sampling" method is also known as:',
-            options: [
-                'A) Random sampling',
-                'B) Network sampling',
-                'C) Stratified sampling',
-                'D) Systematic sampling'
-            ],
-            correct: 1
-        }, {
-            id: 46,
-            text: 'A "null hypothesis" (H₀) states that:',
-            options: [
-                'A) There is a significant relationship between variables',
-                'B) There is no association between variables',
-                'C) The research is invalid',
-                'D) The sample size is too small'
-            ],
-            correct: 1
-        }, {
-            id: 47,
-            text: 'An "alternative hypothesis" (Hₐ) states that:',
-            options: [
-                'A) There is no relationship between variables',
-                'B) There is a significant relationship between variables',
-                'C) The study should not be conducted',
-                'D) The variables cannot be measured'
-            ],
-            correct: 1
-        }, {
-            id: 48,
-            text: 'Which of the following is a characteristic of a good research problem?',
-            options: [
-                'A) It is not of interest to the researcher',
-                'B) It has significance, is researchable, and feasible',
-                'C) It cannot be completed in the stipulated time',
-                'D) Variables cannot be defined'
-            ],
-            correct: 1
-        }, {
-            id: 49,
-            text: 'The first and most important step in the research process is:',
-            options: [
-                'A) Data collection',
-                'B) Identification of the research problem',
-                'C) Literature review',
-                'D) Hypothesis testing'
-            ],
-            correct: 1
-        }, {
             id: 50,
-            text: 'Literature review is important because it helps the researcher to:',
+            text: 'The document states that research is "replicable and transmissible." This means:',
             options: [
-                'A) Avoid reading any previous work',
-                'B) Identify what is already known and locate useful research strategies',
-                'C) Copy other people\'s work',
-                'D) Skip the research process'
+                'A) Each study must produce different results',
+                'B) Research can be reported, recorded, and repeated in different settings',
+                'C) Research findings cannot be shared',
+                'D) Research is only valid in the original context'
             ],
             correct: 1
         }];
@@ -1454,14 +1451,14 @@
             current: 0,
             answers: new Array(QUESTIONS.length).fill(null),
             submitted: false,
-            timer: 60 * 60,
+            timer: 60 * 60, // 60 minutes
             timerInterval: null,
             reviewMode: false,
             started: false,
         };
 
         const LETTERS = ['A', 'B', 'C', 'D'];
-        const STORAGE_KEY = 'cbt_history_judith';
+        const STORAGE_KEY = 'cbt_history_judith_tough';
 
         // ─── DOM refs ───
         const $ = (id) => document.getElementById(id);
@@ -1559,7 +1556,6 @@
             html += `</tbody></table>`;
             historyContent.innerHTML = html;
 
-            // Attach download events to each history row
             document.querySelectorAll('.btn-download-history').forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     const idx = parseInt(this.dataset.historyIndex);
@@ -1575,7 +1571,7 @@
             const lines = [];
             const date = new Date(entry.timestamp);
             lines.push('═══════════════════════════════════════════');
-            lines.push(`  💕 CBT RESULTS – ${entry.name || 'My Love'} (History)`);
+            lines.push(`  💕 TOUGH CBT RESULTS – ${entry.name || 'My Love'} (History)`);
             lines.push('═══════════════════════════════════════════');
             lines.push(`Date: ${date.toLocaleString()}`);
             lines.push(`Candidate: ${entry.name || 'Anonymous'}`);
@@ -1601,7 +1597,8 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            const fname = `CBT_History_${entry.name?.replace(/\s+/g, '_') || 'anonymous'}_${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}.txt`;
+            const fname =
+                `ToughCBT_History_${entry.name?.replace(/\s+/g, '_') || 'anonymous'}_${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}.txt`;
             a.download = fname;
             document.body.appendChild(a);
             a.click();
@@ -1609,7 +1606,6 @@
             URL.revokeObjectURL(url);
         }
 
-        // ─── Toggle history panel ───
         function toggleHistory() {
             const isVisible = historyPanel.classList.contains('visible');
             if (isVisible) {
@@ -1617,7 +1613,6 @@
             } else {
                 renderHistory();
                 historyPanel.classList.add('visible');
-                // close results if open? no need.
             }
         }
 
@@ -1666,11 +1661,10 @@
             updateProgress();
             updateAnsweredCount();
             startTimer();
-            // close history if open
             historyPanel.classList.remove('visible');
         }
 
-        // ─── RENDER ─── (same as before)
+        // ─── RENDER ───
         function renderQuestion() {
             const q = QUESTIONS[state.current];
             const idx = state.current;
@@ -1861,10 +1855,10 @@
 
             const pct = Math.round((correct / QUESTIONS.length) * 100);
             let msg = '';
-            if (pct >= 80) msg = '💖 You\'re a star! I\'m so lucky to have you. Forgive me?';
-            else if (pct >= 60) msg = '💕 Good job, love! I promise to remember our anniversary next time.';
-            else if (pct >= 40) msg = '🌸 Not bad at all! I\'ll make it up to you with a nice dinner.';
-            else msg = '💗 I know I messed up, but you\'re still my everything. Let\'s try again?';
+            if (pct >= 80) msg = '💖 You\'re a genius! I\'m so lucky to have you. Forgive me?';
+            else if (pct >= 60) msg = '💕 Great job, love! Those were tough questions!';
+            else if (pct >= 40) msg = '🌸 Not bad at all! Tough exam, but you did well.';
+            else msg = '💗 I know it was hard, but you\'re still my everything. Let\'s try again?';
             resultMessage.textContent = msg;
 
             resultsContainer.style.display = 'block';
@@ -1873,7 +1867,7 @@
             progressBar.style.width = '100%';
             progressBar.setAttribute('aria-valuenow', 100);
 
-            // ─── Save to history ───
+            // Save to history
             const entry = {
                 name: state.candidateName,
                 timestamp: Date.now(),
@@ -1889,12 +1883,11 @@
 
         // ─── DOWNLOAD CURRENT RESULTS ───
         function downloadCurrentResults() {
-            // build from current state
             const lines = [];
             const now = new Date();
             const dateStr = now.toLocaleString();
             lines.push('═══════════════════════════════════════════');
-            lines.push(`  💕 CBT RESULTS – ${state.candidateName || 'My Love'}`);
+            lines.push(`  💕 TOUGH CBT RESULTS – ${state.candidateName || 'My Love'}`);
             lines.push('═══════════════════════════════════════════');
             lines.push(`Date: ${dateStr}`);
             lines.push(`Candidate: ${state.candidateName || 'Anonymous'}`);
@@ -1926,7 +1919,7 @@
             const a = document.createElement('a');
             a.href = url;
             a.download =
-                `CBT_Results_${state.candidateName.replace(/\s+/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.txt`;
+                `ToughCBT_Results_${state.candidateName.replace(/\s+/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.txt`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -1957,7 +1950,6 @@
             document.querySelectorAll('.option-item').forEach(el => {
                 el.classList.remove('correct-reveal', 'wrong-reveal');
             });
-            // close history
             historyPanel.classList.remove('visible');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -2008,7 +2000,7 @@
 
         // ─── READY ───
         examUi.classList.remove('visible');
-        console.log('💖 For Peter Ifeoma Judith – with auto-saved history! 💖');
+        console.log('💖 Tough CBT Exam loaded – 50 challenging questions for Peter Ifeoma Judith! 💖');
     </script>
 </body>
 </html>

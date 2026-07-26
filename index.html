@@ -825,7 +825,7 @@
                     <h1 id="welcomeTitle">
                         For <span class="name-highlight">Peter Ifeoma Judith</span> 💕
                     </h1>
-                    <p class="sub">✨ Research Methods · 50 Questions · 30 Minutes ✨</p>
+                    <p class="sub">✨ Research Methods · 50 Questions · 60 Minutes ✨</p>
                     <div class="quote">
                         <i>“</i> Sorry for forgetting our monthly anniversary… let me make it up to you with this exam. <i>”</i>
                         <br /><span style="font-size:0.8rem;color:var(--gray-600);">— With love, always ❤️</span>
@@ -1454,7 +1454,7 @@
             current: 0,
             answers: new Array(QUESTIONS.length).fill(null),
             submitted: false,
-            timer: 30 * 60,
+            timer: 60 * 60,
             timerInterval: null,
             reviewMode: false,
             started: false,
@@ -1657,7 +1657,7 @@
             state.answers.fill(null);
             state.submitted = false;
             state.reviewMode = false;
-            state.timer = 30 * 60;
+            state.timer = 60 * 60;
             resultsContainer.style.display = 'none';
             submitBtn.style.display = 'inline-flex';
             totalNum.textContent = QUESTIONS.length;
@@ -1941,7 +1941,7 @@
             state.answers.fill(null);
             state.submitted = false;
             state.reviewMode = false;
-            state.timer = 30 * 60;
+            state.timer = 60 * 60;
             resultsContainer.style.display = 'none';
             document.querySelector('.exam-header').style.display = 'flex';
             document.querySelector('.progress-track').style.display = 'block';

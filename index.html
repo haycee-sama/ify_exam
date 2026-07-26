@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💕 CBT Exam – For Peter Ifeoma Judith</title>
+    <meta name="description" content="Personalized CBT exam with auto-saved history and score tracking." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+
+    <!-- Bootstrap 5 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --rose: #e8436e;
+            --rose-light: #fce4ec;
+            --rose-soft: #f8d7e0;
+            --rose-glow: #f06292;
+            --cream: #fff5f7;
+            --love-shadow: 0 12px 40px rgba(232, 67, 110, 0.18);
+            --radius: 20px;
+            --primary: #e8436e;
+            --primary-hover: #d6335a;
+            --primary-light: #fce4ec;
+            --success: #2e7d32;
+            --danger: #c62828;
+            --gray-100: #fdf8f9;
+            --gray-200: #f0e6e8;
+            --gray-300: #e0d0d4;
+            --gray-600: #8a7a7e;
+            --gray-800: #3d2c30;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(145deg, #fdf6f7 0%, #fce4ec 100%);
+            color: var(--gray-800);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+        }
+        :focus-visible {
+            outline: 3px solid var(--rose);
+            outline-offset: 2px;
+            border-radius: 6px;
+        }
+        .cbt-wrapper {
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .cbt-card {
+            background: #ffffff;
+            border-radius: var(--radius);
+            box-shadow: var(--love-shadow), 0 0 0 1px rgba(232, 67, 110, 0.08);
+            padding: 32px 28px;
+            border: 1px solid rgba(232, 67, 110, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .cbt-card::before {
+            content: '💕';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.08;
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+        .cbt-card::after {
+            content: '✨';
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 3rem;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+        @media (max-width: 576px) {
+            .cbt-card {
+                padding: 20px 16px;
+                border-radius: 14px;
+            }
+            body {
+                padding: 12px;
+            }
+        }
+
+        /* ─── Floating hearts background ─── */
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .heart-float {
+            position: absolute;
+            font-size: 1.2rem;
+            opacity: 0.12;
+            animation: floatHeart 20s infinite linear;
+            color: var(--rose);
+        }
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.6);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.12;
+            }
+            90% {
+                opacity: 0.12;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(720deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* ─── Welcome overlay ─── */
+        .welcome-overlay {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            border: 2px solid rgba(232, 67, 110, 0.15);
+        }
+        .welcome-overlay.hidden {
+            opacity: 0;
+            transform: scale(0.96);
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--radius);
+        }
+        .welcome-box {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .welcome-box .love-icon {
+            font-size: 3.2rem;
+            animation: pulseLove 2s infinite ease-in-out;
+            display: block;
+            margin-bottom: 4px;
+        }
+        @keyframes pulseLove {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        .welcome-box h1 {
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--rose);
+            letter-spacing: -0.02em;
+        }
+        .welcome-box h1 .name-highlight {
+            background: linear-gradient(135deg, var(--rose), #d63384);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .welcome-box .sub {
+            color: var(--gray-600);
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+        .welcome-box .quote {
+            font-style: italic;
+            color: var(--rose);
+            background: var(--rose-light);
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            margin: 14px 0 22px;
+            border-left: 4px solid var(--rose);
+            font-weight: 500;
+        }
+        .welcome-box .quote i {
+            color: var(--rose);
+            margin: 0 4px;
+        }
+        .welcome-box .form-control {
+            border-radius: 40px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid var(--gray-200);
+            transition: 0.2s;
+            text-align: center;
+            background: #fff;
+        }
+        .welcome-box .form-control:focus {
+            border-color: var(--rose);
+            box-shadow: 0 0 0 4px rgba(232, 67, 110, 0.12);
+        }
+        .welcome-box .form-control::placeholder {
+            color: #c0a8ae;
+        }
+        .welcome-box .btn-start {
+            border-radius: 40px;
+            padding: 14px 32px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 100%;
+            background: linear-gradient(135deg, var(--rose), #d63384);
+            border: none;
+            color: #fff;
+            transition: 0.25s;
+            margin-top: 12px;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 16px rgba(232, 67, 110, 0.3);
+        }
+        .welcome-box .btn-start:hover:not(:disabled) {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 24px rgba(232, 67, 110, 0.4);
+        }
+        .welcome-box .btn-start:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ─── Exam UI ─── */
+        .exam-ui {
+            display: none;
+            position: relative;
+            z-index: 1;
+        }
+        .exam-ui.visible {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── Header ─── */
+        .exam-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .exam-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            color: var(--rose);
+        }
+        .exam-title .candidate {
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            background: var(--rose-light);
+            padding: 4px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(232, 67, 110, 0.2);
+        }
+        .exam-title .heart-small {
+            color: var(--rose);
+            font-size: 1.1rem;
+        }
+        .header-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .btn-history {
+            border-radius: 40px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            background: var(--rose-light);
+            border: 1px solid rgba(232, 67, 110, 0.2);
+            color: var(--rose);
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .btn-history:hover {
+            background: var(--rose);
+            color: #fff;
+        }
+        .timer-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            background: var(--rose-light);
+            padding: 8px 18px 8px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(232, 67, 110, 0.2);
+            color: var(--rose);
+        }
+        .timer-box .time {
+            font-variant-numeric: tabular-nums;
+            min-width: 60px;
+            text-align: center;
+        }
+        .timer-box.warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        .timer-box.danger {
+            background: #f8d7da;
+            border-color: var(--danger);
+            color: #721c24;
+            animation: pulse-bg 1.2s infinite;
+        }
+        @keyframes pulse-bg {
+            0%,
+            100% {
+                background: #f8d7da;
+            }
+            50% {
+                background: #f1c0c0;
+            }
+        }
+
+        /* ─── Progress ─── */
+        .progress-track {
+            margin-bottom: 22px;
+        }
+        .progress-track .meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            margin-bottom: 6px;
+        }
+        .progress {
+            height: 8px;
+            border-radius: 20px;
+            background: var(--gray-200);
+        }
+        .progress-bar {
+            border-radius: 20px;
+            background: linear-gradient(90deg, var(--rose), var(--rose-glow));
+            transition: width 0.3s ease;
+        }
+
+        /* ─── Question ─── */
+        .question-number {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--rose);
+            background: var(--rose-light);
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-bottom: 12px;
+        }
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            min-height: 3.2rem;
+            color: var(--gray-800);
+        }
+
+        /* ─── Options ─── */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 18px;
+            border: 2px solid var(--gray-200);
+            border-radius: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+            background: #fff;
+            font-weight: 500;
+            user-select: none;
+        }
+        .option-item:hover {
+            border-color: var(--rose-glow);
+            background: var(--cream);
+        }
+        .option-item .letter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--gray-800);
+            flex-shrink: 0;
+            transition: 0.15s;
+        }
+        .option-item.selected {
+            border-color: var(--rose);
+            background: var(--rose-light);
+            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.15);
+        }
+        .option-item.selected .letter {
+            background: var(--rose);
+            color: #fff;
+        }
+        .option-item.correct-reveal {
+            border-color: var(--success);
+            background: #dff0d8;
+        }
+        .option-item.correct-reveal .letter {
+            background: var(--success);
+            color: #fff;
+        }
+        .option-item.wrong-reveal {
+            border-color: var(--danger);
+            background: #f8d7da;
+        }
+        .option-item.wrong-reveal .letter {
+            background: var(--danger);
+            color: #fff;
+        }
+        .option-item input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+
+        /* ─── Nav ─── */
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+        .btn {
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 22px;
+            border-radius: 40px;
+            border: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .btn-outline-secondary {
+            border-color: var(--gray-300);
+            color: var(--gray-800);
+        }
+        .btn-outline-secondary:hover {
+            background: var(--gray-200);
+            border-color: var(--gray-600);
+        }
+        .btn-rose {
+            background: var(--rose);
+            border-color: var(--rose);
+            color: #fff;
+        }
+        .btn-rose:hover {
+            background: var(--primary-hover);
+            border-color: var(--primary-hover);
+            color: #fff;
+        }
+        .btn-success {
+            background: var(--success);
+            border-color: var(--success);
+            color: #fff;
+        }
+        .btn-danger {
+            background: var(--danger);
+            border-color: var(--danger);
+            color: #fff;
+        }
+
+        /* ─── Palette ─── */
+        .palette-section {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 2px solid var(--gray-200);
+        }
+        .palette-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--gray-600);
+            margin-bottom: 12px;
+        }
+        .palette-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .palette-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 2px solid var(--gray-200);
+            background: #fff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--gray-800);
+            transition: 0.15s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .palette-btn:hover {
+            border-color: var(--rose-glow);
+            transform: scale(1.05);
+        }
+        .palette-btn.active-q {
+            border-color: var(--rose);
+            background: var(--rose-light);
+            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.2);
+        }
+        .palette-btn.answered {
+            background: var(--rose);
+            border-color: var(--rose);
+            color: #fff;
+        }
+        .palette-btn.answered.active-q {
+            background: var(--rose);
+            border-color: var(--rose);
+            color: #fff;
+            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.4);
+        }
+
+        /* ─── Results ─── */
+        .result-box {
+            text-align: center;
+            padding: 20px 0 8px;
+        }
+        .result-box .score-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--rose-light);
+            border: 6px solid var(--rose);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--rose);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .result-box .score-circle .denominator {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+        .result-box .score-circle .heart-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 1.8rem;
+            animation: pulseLove 2s infinite;
+        }
+        .result-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px 40px;
+            margin: 20px 0 24px;
+        }
+        .result-stats .stat {
+            text-align: center;
+        }
+        .result-stats .stat .num {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .result-stats .stat.correct .num {
+            color: var(--success);
+        }
+        .result-stats .stat.wrong .num {
+            color: var(--danger);
+        }
+        .result-stats .stat.unanswered .num {
+            color: var(--gray-600);
+        }
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .result-message-love {
+            font-size: 1.1rem;
+            color: var(--rose);
+            background: var(--rose-light);
+            padding: 10px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 6px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ─── History modal / panel ─── */
+        .history-panel {
+            display: none;
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 24px;
+            border: 2px solid var(--rose-light);
+            box-shadow: var(--love-shadow);
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .history-panel.visible {
+            display: block;
+            animation: fadeSlide 0.3s ease;
+        }
+        .history-panel h3 {
+            color: var(--rose);
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .history-table th {
+            background: var(--rose-light);
+            color: var(--gray-800);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .history-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .history-table tr:hover {
+            background: var(--cream);
+        }
+        .history-table .badge-score {
+            background: var(--rose);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+        .history-empty {
+            text-align: center;
+            color: var(--gray-600);
+            padding: 20px 0;
+        }
+        .btn-download-history {
+            font-size: 0.8rem;
+            padding: 2px 10px;
+            border-radius: 40px;
+            background: var(--gray-200);
+            border: none;
+            transition: 0.2s;
+        }
+        .btn-download-history:hover {
+            background: var(--rose);
+            color: #fff;
+        }
+
+        /* ─── Utilities ─── */
+        .fade-transition {
+            animation: fadeSlide 0.3s ease;
+        }
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        @media (max-width: 480px) {
+            .palette-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.75rem;
+            }
+            .question-text {
+                font-size: 1rem;
+            }
+            .welcome-box h1 {
+                font-size: 1.7rem;
+            }
+            .welcome-box .love-icon {
+                font-size: 2.8rem;
+            }
+            .history-table {
+                font-size: 0.75rem;
+            }
+            .history-table th,
+            .history-table td {
+                padding: 6px 8px;
+            }
+        }
+        @media print {
+            .cbt-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            .timer-box,
+            .nav-buttons,
+            .palette-section,
+            .welcome-overlay,
+            .hearts-bg,
+            .history-panel {
+                display: none !important;
+            }
+        }
+        /* scroll */
+        .palette-grid {
+            max-height: 160px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .palette-grid::-webkit-scrollbar {
+            width: 4px;
+        }
+        .palette-grid::-webkit-scrollbar-track {
+            background: var(--gray-200);
+            border-radius: 10px;
+        }
+        .palette-grid::-webkit-scrollbar-thumb {
+            background: var(--rose-glow);
+            border-radius: 10px;
+        }
+        .history-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        .history-panel::-webkit-scrollbar-track {
+            background: var(--gray-200);
+            border-radius: 10px;
+        }
+        .history-panel::-webkit-scrollbar-thumb {
+            background: var(--rose-glow);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── Floating hearts ─── -->
+    <div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
+
+    <div class="cbt-wrapper" role="main">
+        <div class="cbt-card" id="app">
+
+            <!-- ─── WELCOME OVERLAY ─── -->
+            <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+                <div class="welcome-box">
+                    <span class="love-icon">💖</span>
+                    <h1 id="welcomeTitle">
+                        For <span class="name-highlight">Peter Ifeoma Judith</span> 💕
+                    </h1>
+                    <p class="sub">✨ Research Methods · 50 Questions · 30 Minutes ✨</p>
+                    <div class="quote">
+                        <i>“</i> Sorry for forgetting our monthly anniversary… let me make it up to you with this exam. <i>”</i>
+                        <br /><span style="font-size:0.8rem;color:var(--gray-600);">— With love, always ❤️</span>
+                    </div>
+                    <label for="candidateName" class="form-label fw-semibold" style="color:var(--gray-800);">
+                        Enter your name, my love 💕
+                    </label>
+                    <input type="text" id="candidateName" class="form-control" placeholder="e.g. Peter Ifeoma Judith" autocomplete="name" />
+                    <button class="btn-start" id="startExamBtn" disabled>
+                        <i class="bi bi-heart-fill" style="margin-right:6px;"></i> Start the Exam <i class="bi bi-heart-fill" style="margin-left:6px;"></i>
+                    </button>
+                    <p class="text-muted mt-3 small" style="font-size:0.8rem;">
+                        <i class="bi bi-keyboard"></i> Keyboard: 1‑4 for options, ← → to navigate
+                    </p>
+                </div>
+            </div>
+
+            <!-- ─── EXAM UI ─── -->
+            <div class="exam-ui" id="examUi">
+
+                <!-- Header -->
+                <header class="exam-header">
+                    <div class="exam-title">
+                        💕 CBT Exam
+                        <span class="heart-small">❤️</span>
+                        <span class="candidate" id="candidateDisplay">—</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-history" id="toggleHistoryBtn" aria-label="View score history">
+                            <i class="bi bi-clock-history"></i> History
+                        </button>
+                        <div class="timer-box" id="timerBox" role="timer" aria-live="polite">
+                            <i class="bi bi-clock" aria-hidden="true"></i>
+                            <span class="time" id="timerDisplay">30:00</span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Progress -->
+                <div class="progress-track">
+                    <div class="meta">
+                        <span id="progressLabel">Question <strong id="currentNum">1</strong> of <strong id="totalNum">50</strong></span>
+                        <span id="answeredCount">0 answered</span>
+                    </div>
+                    <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+                    </div>
+                </div>
+
+                <!-- Question -->
+                <section aria-label="Question content">
+                    <div class="question-number" id="qNumBadge">Q1</div>
+                    <div class="question-text" id="questionText" role="heading" aria-level="2">Loading…</div>
+                    <div class="options-list" id="optionsContainer" role="radiogroup" aria-label="Answer options"></div>
+                </section>
+
+                <!-- Navigation -->
+                <nav class="nav-buttons" aria-label="Question navigation">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-secondary" id="prevBtn" aria-label="Previous question"><i class="bi bi-chevron-left"></i> Previous</button>
+                        <button class="btn btn-outline-secondary" id="nextBtn" aria-label="Next question">Next <i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-rose" id="submitBtn"><i class="bi bi-heart-fill"></i> Submit Exam</button>
+                    </div>
+                </nav>
+
+                <!-- Palette -->
+                <section class="palette-section" aria-label="Question navigation palette">
+                    <div class="palette-title">
+                        <i class="bi bi-grid-3x3-gap-fill"></i> Question Palette
+                        <span class="text-muted fw-normal ms-2" style="font-size:0.75rem;text-transform:none;">
+                            (answered <span id="paletteAnswered">0</span>/50)
+                        </span>
+                    </div>
+                    <div class="palette-grid" id="paletteGrid" role="list"></div>
+                </section>
+
+                <!-- Results (hidden initially) -->
+                <div id="resultsContainer" style="display:none;" class="result-box fade-transition" role="region" aria-live="polite">
+                    <div class="score-circle">
+                        <span class="heart-badge">💕</span>
+                        <span id="scoreNum">0</span><span class="denominator">/50</span>
+                    </div>
+                    <h3 id="resultTitle" style="font-weight:700;color:var(--rose);margin-bottom:2px;">
+                        For You, My Love 💖
+                    </h3>
+                    <div class="result-message-love" id="resultMessage">✨ You're amazing! ✨</div>
+                    <div class="result-stats">
+                        <div class="stat correct"><div class="num" id="correctCount">0</div><div class="label">✅ Correct</div></div>
+                        <div class="stat wrong"><div class="num" id="wrongCount">0</div><div class="label">❌ Wrong</div></div>
+                        <div class="stat unanswered"><div class="num" id="unansweredCount">0</div><div class="label">⏭️ Unanswered</div></div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn btn-rose" id="downloadTxtBtn"><i class="bi bi-download"></i> Save Results (.txt)</button>
+                        <button class="btn btn-outline-secondary" id="restartBtn"><i class="bi bi-arrow-counterclockwise"></i> Retry</button>
+                    </div>
+                </div>
+
+                <!-- ─── HISTORY PANEL ─── -->
+                <div class="history-panel" id="historyPanel">
+                    <h3>
+                        <span><i class="bi bi-clock-history"></i> Score History</span>
+                        <button class="btn btn-outline-secondary btn-sm" id="closeHistoryBtn" style="border-radius:40px;padding:4px 14px;">Close</button>
+                    </h3>
+                    <div id="historyContent">
+                        <!-- injected by JS -->
+                    </div>
+                </div>
+
+            </div><!-- /exam-ui -->
+        </div><!-- /cbt-card -->
+    </div>
+
+    <script>
+        /* ============================================================
+           CBT EXAM – Apology Edition with Auto‑saved History
+           ============================================================ */
+
+        // ─── 50 QUESTIONS (same) ───
+        const QUESTIONS = [{
+            id: 1,
+            text: 'Research can best be described as:',
+            options: [
+                'A) A casual process of gathering information',
+                'B) A systematic, organized, and controlled process involving observations and analysis to discover truth',
+                'C) Reading books and articles on a topic',
+                'D) Collecting opinions from friends and colleagues'
+            ],
+            correct: 1
+        }, {
+            id: 2,
+            text: 'The purpose of research is to:',
+            options: [
+                'A) Confirm what is already known',
+                'B) Develop, refine, and expand a body of knowledge',
+                'C) Make researchers famous',
+                'D) Fulfill academic requirements only'
+            ],
+            correct: 1
+        }, {
+            id: 3,
+            text: 'Which of the following best defines an "abstract"?',
+            options: [
+                'A) A detailed explanation of methodology',
+                'B) A synopsis of the entire work that gives a clear idea of the work at a glance',
+                'C) A list of references used in the study',
+                'D) The conclusion section of a research paper'
+            ],
+            correct: 1
+        }, {
+            id: 4,
+            text: '"Bias" in research refers to:',
+            options: [
+                'A) A researcher\'s personal opinion',
+                'B) Any influence that produces distortion in the results of a study',
+                'C) The hypothesis of the study',
+                'D) The sampling technique used'
+            ],
+            correct: 1
+        }, {
+            id: 5,
+            text: 'What is a "concept" in research terms?',
+            options: [
+                'A) A proven fact',
+                'B) An abstract idea based on observations of certain behaviours or characteristics',
+                'C) The final conclusion of a study',
+                'D) A statistical measurement'
+            ],
+            correct: 1
+        }, {
+            id: 6,
+            text: 'A "construct" in research is best described as:',
+            options: [
+                'A) A concrete object being studied',
+                'B) An abstract or concept deliberately invented by the researcher for a specific purpose',
+                'C) The control group in an experiment',
+                'D) The dependent variable'
+            ],
+            correct: 1
+        }, {
+            id: 7,
+            text: '"Data" in research refers to:',
+            options: [
+                'A) Only numerical information',
+                'B) Facts or evidence obtained from observation or experiment',
+                'C) The researcher\'s personal notes',
+                'D) The literature review section'
+            ],
+            correct: 1
+        }, {
+            id: 8,
+            text: '"Reliability" of an instrument refers to:',
+            options: [
+                'A) Whether it measures what it is supposed to measure',
+                'B) The degree of consistency — getting the same answer any time it is applied',
+                'C) The cost of the instrument',
+                'D) The length of the instrument'
+            ],
+            correct: 1
+        }, {
+            id: 9,
+            text: '"Validity" in research refers to:',
+            options: [
+                'A) The degree to which an instrument reflects what it is supposed to measure',
+                'B) How many people participated in the study',
+                'C) The researcher\'s qualifications',
+                'D) The number of references cited'
+            ],
+            correct: 0
+        }, {
+            id: 10,
+            text: '"Plagiarism" is defined as:',
+            options: [
+                'A) Properly citing sources',
+                'B) Copying another person\'s work or idea while pretending to be the originator',
+                'C) Conducting original research',
+                'D) Using statistical analysis'
+            ],
+            correct: 1
+        }, {
+            id: 11,
+            text: 'A "variable" in research is defined as:',
+            options: [
+                'A) Something that remains constant',
+                'B) Anything that varies in its characteristics and can take more than one value',
+                'C) The research problem',
+                'D) The literature review'
+            ],
+            correct: 1
+        }, {
+            id: 12,
+            text: 'The independent variable is:',
+            options: [
+                'A) The outcome or effect being measured',
+                'B) The presumed cause of a situation or event',
+                'C) A variable that is not relevant to the study',
+                'D) The control group'
+            ],
+            correct: 1
+        }, {
+            id: 13,
+            text: 'The dependent variable is:',
+            options: [
+                'A) The presumed cause',
+                'B) The pressured effect or outcome variable',
+                'C) The experimental group',
+                'D) The research design'
+            ],
+            correct: 1
+        }, {
+            id: 14,
+            text: 'In a study examining the effect of smoking on lung cancer, smoking is the:',
+            options: [
+                'A) Dependent variable',
+                'B) Independent variable',
+                'C) Extraneous variable',
+                'D) Moderator variable'
+            ],
+            correct: 1
+        }, {
+            id: 15,
+            text: 'A "dichotomous variable" is one that:',
+            options: [
+                'A) Has infinite values',
+                'B) Takes on only two values (e.g., male/female)',
+                'C) Has more than two categories',
+                'D) Is continuous in nature'
+            ],
+            correct: 1
+        }, {
+            id: 16,
+            text: 'Which of the following is an example of a "continuous variable"?',
+            options: [
+                'A) Sex (male/female)',
+                'B) Blood group (A, B, AB, O)',
+                'C) Age',
+                'D) Marital status'
+            ],
+            correct: 2
+        }, {
+            id: 17,
+            text: 'A "categorical variable" is characterized by:',
+            options: [
+                'A) Having infinite values',
+                'B) Taking on a small range of values that do not represent a quantity',
+                'C) Being measured on a continuous scale',
+                'D) Having no categories'
+            ],
+            correct: 1
+        }, {
+            id: 18,
+            text: '"Extraneous variables" are:',
+            options: [
+                'A) Variables that are purposely manipulated',
+                'B) Variables that exist and compete in the relationship between dependent and independent variables',
+                'C) The main variables of interest',
+                'D) Variables that are never measured'
+            ],
+            correct: 1
+        }, {
+            id: 19,
+            text: 'A "moderator variable" is one that:',
+            options: [
+                'A) Has no effect on the study',
+                'B) Moderates between the dependent and independent variable',
+                'C) Is the same as the independent variable',
+                'D) Is always categorical'
+            ],
+            correct: 1
+        }, {
+            id: 20,
+            text: 'Which of the following is a "dichotomous variable"?',
+            options: [
+                'A) Age in years',
+                'B) Height in centimeters',
+                'C) Gender (male/female)',
+                'D) Weight in kilograms'
+            ],
+            correct: 2
+        }, {
+            id: 21,
+            text: 'Basic (Pure) research is:',
+            options: [
+                'A) Designed to solve immediate problems',
+                'B) Used to generate new knowledge or formulate theories',
+                'C) Always quantitative',
+                'D) Never used in nursing'
+            ],
+            correct: 1
+        }, {
+            id: 22,
+            text: 'Applied research focuses on:',
+            options: [
+                'A) Generating new theories',
+                'B) Finding solutions to existing problems',
+                'C) Historical analysis only',
+                'D) Testing random hypotheses'
+            ],
+            correct: 1
+        }, {
+            id: 23,
+            text: 'Experimental research is characterized by:',
+            options: [
+                'A) No control group',
+                'B) Manipulation of variables, control group, and randomization',
+                'C) Only observational methods',
+                'D) No intervention'
+            ],
+            correct: 1
+        }, {
+            id: 24,
+            text: 'Quasi-experimental design differs from true experimental design because it:',
+            options: [
+                'A) Has no control group and no randomization',
+                'B) Cannot be used in nursing',
+                'C) Always has a control group',
+                'D) Is only used in laboratory settings'
+            ],
+            correct: 0
+        }, {
+            id: 25,
+            text: 'A "survey" research design deals with:',
+            options: [
+                'A) Collecting data from a group of people to ascertain their interests, opinions, and beliefs',
+                'B) Conducting laboratory experiments',
+                'C) Analyzing historical documents',
+                'D) Studying a single individual'
+            ],
+            correct: 0
+        }, {
+            id: 26,
+            text: '"Longitudinal survey" refers to:',
+            options: [
+                'A) Collecting data at one point in time',
+                'B) Collecting data at more than one point in time',
+                'C) A survey that never ends',
+                'D) A survey with no participants'
+            ],
+            correct: 1
+        }, {
+            id: 27,
+            text: '"Cross-sectional survey" involves:',
+            options: [
+                'A) Collecting data over many years',
+                'B) Collection of data at one point in time',
+                'C) Following participants for decades',
+                'D) Experimental manipulation'
+            ],
+            correct: 1
+        }, {
+            id: 28,
+            text: 'Descriptive research is aimed at:',
+            options: [
+                'A) Manipulating variables',
+                'B) Providing a factual descriptive picture of a situation',
+                'C) Establishing cause and effect',
+                'D) Testing hypotheses only'
+            ],
+            correct: 1
+        }, {
+            id: 29,
+            text: 'Historical research involves:',
+            options: [
+                'A) Conducting experiments',
+                'B) Tracing events in life history and examining past events',
+                'C) Surveying current opinions',
+                'D) Predicting future events only'
+            ],
+            correct: 1
+        }, {
+            id: 30,
+            text: 'A "case study" involves:',
+            options: [
+                'A) Studying many cases at once',
+                'B) In-depth data collection relating to a person\'s present state and past experiences',
+                'C) A survey of a large population',
+                'D) Only quantitative data collection'
+            ],
+            correct: 1
+        }, {
+            id: 31,
+            text: 'A "pilot study" is:',
+            options: [
+                'A) The main study',
+                'B) A small-scale study on a sample similar to those in the main study to test materials',
+                'C) A study conducted by students only',
+                'D) A study with no participants'
+            ],
+            correct: 1
+        }, {
+            id: 32,
+            text: '"Snowball sampling" refers to:',
+            options: [
+                'A) Random selection of participants',
+                'B) Selection of participants by means of referrals from earlier participants',
+                'C) Selecting participants from a database',
+                'D) Using only one participant'
+            ],
+            correct: 1
+        }, {
+            id: 33,
+            text: 'The "population" in research refers to:',
+            options: [
+                'A) Only the sample selected',
+                'B) All elements/subjects or observations related to a particular phenomenon of interest',
+                'C) The control group only',
+                'D) The experimental group only'
+            ],
+            correct: 1
+        }, {
+            id: 34,
+            text: 'A "sample" is:',
+            options: [
+                'A) The entire population',
+                'B) A portion of the population selected for study',
+                'C) The control group',
+                'D) The research instrument'
+            ],
+            correct: 1
+        }, {
+            id: 35,
+            text: '"Primary sources" of literature include:',
+            options: [
+                'A) Textbooks',
+                'B) Direct accounts from individuals who observed the phenomenon',
+                'C) Encyclopedias',
+                'D) Review articles'
+            ],
+            correct: 1
+        }, {
+            id: 36,
+            text: '"Secondary sources" of literature include:',
+            options: [
+                'A) Original research reports',
+                'B) Textbooks and encyclopedias',
+                'C) Memos and speeches',
+                'D) Patient records'
+            ],
+            correct: 1
+        }, {
+            id: 37,
+            text: 'The "Hawthorne effect" occurs when:',
+            options: [
+                'A) Researchers are biased',
+                'B) Subjects change their behaviour because they are aware of being observed',
+                'C) Instruments are unreliable',
+                'D) Data is missing'
+            ],
+            correct: 1
+        }, {
+            id: 38,
+            text: 'An "operational definition" is:',
+            options: [
+                'A) The dictionary definition of a term',
+                'B) The definition of a concept in terms of how it will be measured',
+                'C) A vague description',
+                'D) A definition from a textbook'
+            ],
+            correct: 1
+        }, {
+            id: 39,
+            text: '"Inference" in research refers to:',
+            options: [
+                'A) The conclusion of the study',
+                'B) The process of applying characteristics of the sample to the general population',
+                'C) The research question',
+                'D) The literature review'
+            ],
+            correct: 1
+        }, {
+            id: 40,
+            text: '"Parameter" refers to:',
+            options: [
+                'A) A characteristic of a sample',
+                'B) A piece of information collected from a population',
+                'C) A research design',
+                'D) A statistical test'
+            ],
+            correct: 1
+        }, {
+            id: 41,
+            text: 'Nursing research is important because it:',
+            options: [
+                'A) Only serves academic purposes',
+                'B) Helps establish a scientific base of knowledge for nursing practice',
+                'C) Is not needed in modern nursing',
+                'D) Replaces clinical experience'
+            ],
+            correct: 1
+        }, {
+            id: 42,
+            text: 'Which of the following is NOT listed as a goal of nursing research?',
+            options: [
+                'A) Find ways of increasing cost-effectiveness of nursing activities',
+                'B) Defend professional status',
+                'C) Increase nurses\' salaries',
+                'D) Problem solving'
+            ],
+            correct: 2
+        }, {
+            id: 43,
+            text: 'According to the document, research contributes to nursing by:',
+            options: [
+                'A) Reducing the need for education',
+                'B) Promoting evidence-based practice and accountability',
+                'C) Eliminating the need for theories',
+                'D) Replacing clinical judgment'
+            ],
+            correct: 1
+        }, {
+            id: 44,
+            text: 'Which of the following is a limitation of research according to the document?',
+            options: [
+                'A) Too many qualified researchers',
+                'B) Human rights and moral/ethical considerations',
+                'C) Excessive funding',
+                'D) Too much time available'
+            ],
+            correct: 1
+        }, {
+            id: 45,
+            text: 'The "snowball sampling" method is also known as:',
+            options: [
+                'A) Random sampling',
+                'B) Network sampling',
+                'C) Stratified sampling',
+                'D) Systematic sampling'
+            ],
+            correct: 1
+        }, {
+            id: 46,
+            text: 'A "null hypothesis" (H₀) states that:',
+            options: [
+                'A) There is a significant relationship between variables',
+                'B) There is no association between variables',
+                'C) The research is invalid',
+                'D) The sample size is too small'
+            ],
+            correct: 1
+        }, {
+            id: 47,
+            text: 'An "alternative hypothesis" (Hₐ) states that:',
+            options: [
+                'A) There is no relationship between variables',
+                'B) There is a significant relationship between variables',
+                'C) The study should not be conducted',
+                'D) The variables cannot be measured'
+            ],
+            correct: 1
+        }, {
+            id: 48,
+            text: 'Which of the following is a characteristic of a good research problem?',
+            options: [
+                'A) It is not of interest to the researcher',
+                'B) It has significance, is researchable, and feasible',
+                'C) It cannot be completed in the stipulated time',
+                'D) Variables cannot be defined'
+            ],
+            correct: 1
+        }, {
+            id: 49,
+            text: 'The first and most important step in the research process is:',
+            options: [
+                'A) Data collection',
+                'B) Identification of the research problem',
+                'C) Literature review',
+                'D) Hypothesis testing'
+            ],
+            correct: 1
+        }, {
+            id: 50,
+            text: 'Literature review is important because it helps the researcher to:',
+            options: [
+                'A) Avoid reading any previous work',
+                'B) Identify what is already known and locate useful research strategies',
+                'C) Copy other people\'s work',
+                'D) Skip the research process'
+            ],
+            correct: 1
+        }];
+
+        // ─── STATE ───
+        const state = {
+            candidateName: '',
+            current: 0,
+            answers: new Array(QUESTIONS.length).fill(null),
+            submitted: false,
+            timer: 30 * 60,
+            timerInterval: null,
+            reviewMode: false,
+            started: false,
+        };
+
+        const LETTERS = ['A', 'B', 'C', 'D'];
+        const STORAGE_KEY = 'cbt_history_judith';
+
+        // ─── DOM refs ───
+        const $ = (id) => document.getElementById(id);
+        const welcomeOverlay = $('welcomeOverlay');
+        const candidateNameInput = $('candidateName');
+        const startExamBtn = $('startExamBtn');
+        const examUi = $('examUi');
+        const candidateDisplay = $('candidateDisplay');
+        const questionText = $('questionText');
+        const optionsContainer = $('optionsContainer');
+        const qNumBadge = $('qNumBadge');
+        const currentNum = $('currentNum');
+        const totalNum = $('totalNum');
+        const progressBar = $('progressBar');
+        const progressLabel = $('progressLabel');
+        const answeredCount = $('answeredCount');
+        const timerDisplay = $('timerDisplay');
+        const timerBox = $('timerBox');
+        const paletteGrid = $('paletteGrid');
+        const paletteAnswered = $('paletteAnswered');
+        const prevBtn = $('prevBtn');
+        const nextBtn = $('nextBtn');
+        const submitBtn = $('submitBtn');
+        const restartBtn = $('restartBtn');
+        const downloadTxtBtn = $('downloadTxtBtn');
+        const resultsContainer = $('resultsContainer');
+        const scoreNum = $('scoreNum');
+        const resultTitle = $('resultTitle');
+        const resultMessage = $('resultMessage');
+        const correctCount = $('correctCount');
+        const wrongCount = $('wrongCount');
+        const unansweredCount = $('unansweredCount');
+        const historyPanel = $('historyPanel');
+        const historyContent = $('historyContent');
+        const toggleHistoryBtn = $('toggleHistoryBtn');
+        const closeHistoryBtn = $('closeHistoryBtn');
+
+        // ─── Floating hearts generator ───
+        function createHearts() {
+            const container = document.getElementById('heartsBg');
+            const symbols = ['♥', '❤️', '💕', '💖', '💗', '✨'];
+            for (let i = 0; i < 18; i++) {
+                const el = document.createElement('span');
+                el.className = 'heart-float';
+                el.textContent = symbols[i % symbols.length];
+                el.style.left = (Math.random() * 95) + '%';
+                el.style.fontSize = (0.8 + Math.random() * 1.8) + 'rem';
+                el.style.animationDuration = (18 + Math.random() * 22) + 's';
+                el.style.animationDelay = (Math.random() * 20) + 's';
+                container.appendChild(el);
+            }
+        }
+        createHearts();
+
+        // ─── History management ───
+        function getHistory() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch { return []; }
+        }
+
+        function saveHistoryEntry(entry) {
+            const history = getHistory();
+            history.push(entry);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+        }
+
+        function renderHistory() {
+            const history = getHistory();
+            if (history.length === 0) {
+                historyContent.innerHTML = `<div class="history-empty">No scores recorded yet. Take the exam to see your history.</div>`;
+                return;
+            }
+            let html = `<table class="history-table">
+                <thead><tr><th>#</th><th>Date</th><th>Name</th><th>Score</th><th>Details</th><th>Download</th></tr></thead><tbody>`;
+            history.forEach((entry, index) => {
+                const date = new Date(entry.timestamp);
+                const dateStr = date.toLocaleString();
+                const score = entry.score;
+                const total = entry.total || 50;
+                const pct = Math.round((score / total) * 100);
+                const correct = entry.correct || 0;
+                const wrong = entry.wrong || 0;
+                const unanswered = entry.unanswered || 0;
+                html += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${dateStr}</td>
+                    <td>${entry.name || '—'}</td>
+                    <td><span class="badge-score">${score}/${total} (${pct}%)</span></td>
+                    <td>✅${correct} ❌${wrong} ⏭️${unanswered}</td>
+                    <td><button class="btn-download-history" data-history-index="${index}" aria-label="Download result ${index+1}"><i class="bi bi-download"></i></button></td>
+                </tr>`;
+            });
+            html += `</tbody></table>`;
+            historyContent.innerHTML = html;
+
+            // Attach download events to each history row
+            document.querySelectorAll('.btn-download-history').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const idx = parseInt(this.dataset.historyIndex);
+                    const history = getHistory();
+                    if (history[idx]) {
+                        downloadHistoryResult(history[idx]);
+                    }
+                });
+            });
+        }
+
+        function downloadHistoryResult(entry) {
+            const lines = [];
+            const date = new Date(entry.timestamp);
+            lines.push('═══════════════════════════════════════════');
+            lines.push(`  💕 CBT RESULTS – ${entry.name || 'My Love'} (History)`);
+            lines.push('═══════════════════════════════════════════');
+            lines.push(`Date: ${date.toLocaleString()}`);
+            lines.push(`Candidate: ${entry.name || 'Anonymous'}`);
+            lines.push(`Total Questions: ${entry.total || 50}`);
+            lines.push(`Correct:   ${entry.correct || 0}`);
+            lines.push(`Wrong:     ${entry.wrong || 0}`);
+            lines.push(`Unanswered: ${entry.unanswered || 0}`);
+            lines.push(`Score:     ${entry.score}/${entry.total || 50}  (${Math.round((entry.score/(entry.total||50))*100)}%)`);
+            lines.push('');
+            lines.push('─── DETAILED BREAKDOWN ───');
+            if (entry.details && Array.isArray(entry.details)) {
+                entry.details.forEach((d, i) => {
+                    const status = d.status || 'UNKNOWN';
+                    lines.push(`Q${i+1}. ${status}  (Your: ${d.user || '—'} | Correct: ${d.correct || '—'})`);
+                });
+            } else {
+                lines.push('(Detailed answers not available)');
+            }
+            lines.push('');
+            lines.push('─── Archived from history ───');
+            const content = lines.join('\n');
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const fname = `CBT_History_${entry.name?.replace(/\s+/g, '_') || 'anonymous'}_${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}.txt`;
+            a.download = fname;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // ─── Toggle history panel ───
+        function toggleHistory() {
+            const isVisible = historyPanel.classList.contains('visible');
+            if (isVisible) {
+                historyPanel.classList.remove('visible');
+            } else {
+                renderHistory();
+                historyPanel.classList.add('visible');
+                // close results if open? no need.
+            }
+        }
+
+        toggleHistoryBtn.addEventListener('click', toggleHistory);
+        closeHistoryBtn.addEventListener('click', () => {
+            historyPanel.classList.remove('visible');
+        });
+
+        // ─── Name input ───
+        candidateNameInput.addEventListener('input', () => {
+            const name = candidateNameInput.value.trim();
+            startExamBtn.disabled = name.length < 2;
+        });
+        candidateNameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !startExamBtn.disabled) {
+                startExam();
+            }
+        });
+
+        // ─── Start ───
+        startExamBtn.addEventListener('click', startExam);
+
+        function startExam() {
+            const name = candidateNameInput.value.trim();
+            if (name.length < 2) return;
+            state.candidateName = name;
+            candidateDisplay.textContent = '❤️ ' + name;
+            welcomeOverlay.classList.add('hidden');
+            examUi.classList.add('visible');
+            state.started = true;
+            initExam();
+        }
+
+        // ─── Init ───
+        function initExam() {
+            state.current = 0;
+            state.answers.fill(null);
+            state.submitted = false;
+            state.reviewMode = false;
+            state.timer = 30 * 60;
+            resultsContainer.style.display = 'none';
+            submitBtn.style.display = 'inline-flex';
+            totalNum.textContent = QUESTIONS.length;
+            renderQuestion();
+            renderPalette();
+            updateProgress();
+            updateAnsweredCount();
+            startTimer();
+            // close history if open
+            historyPanel.classList.remove('visible');
+        }
+
+        // ─── RENDER ─── (same as before)
+        function renderQuestion() {
+            const q = QUESTIONS[state.current];
+            const idx = state.current;
+            qNumBadge.textContent = `Q${idx + 1}`;
+            currentNum.textContent = idx + 1;
+            questionText.textContent = q.text;
+
+            let html = '';
+            q.options.forEach((opt, i) => {
+                const selected = state.answers[idx] === i ? 'selected' : '';
+                const letter = LETTERS[i];
+                html += `
+                        <div class="option-item ${selected}" role="radio" aria-checked="${selected ? 'true' : 'false'}" tabindex="0"
+                             data-optindex="${i}" data-qindex="${idx}">
+                            <span class="letter">${letter}</span>
+                            <span>${opt}</span>
+                            <input type="radio" name="question" value="${i}" ${selected ? 'checked' : ''} />
+                        </div>
+                    `;
+            });
+            optionsContainer.innerHTML = html;
+
+            document.querySelectorAll('.option-item').forEach(el => {
+                el.addEventListener('click', onOptionClick);
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        onOptionClick.call(el, e);
+                    }
+                });
+            });
+
+            if (state.reviewMode) {
+                const qData = QUESTIONS[idx];
+                const selected = state.answers[idx];
+                document.querySelectorAll('.option-item').forEach((el, i) => {
+                    if (i === qData.correct) {
+                        el.classList.add('correct-reveal');
+                    } else if (selected !== null && i === selected && i !== qData.correct) {
+                        el.classList.add('wrong-reveal');
+                    }
+                });
+            }
+
+            document.querySelectorAll('.palette-btn').forEach((btn, i) => {
+                btn.classList.toggle('active-q', i === idx);
+            });
+        }
+
+        function onOptionClick(e) {
+            if (state.submitted || state.reviewMode) return;
+            const el = e.currentTarget;
+            const qIdx = parseInt(el.dataset.qindex);
+            const optIdx = parseInt(el.dataset.optindex);
+            if (state.answers[qIdx] === optIdx) {
+                state.answers[qIdx] = null;
+            } else {
+                state.answers[qIdx] = optIdx;
+            }
+            renderQuestion();
+            renderPalette();
+            updateProgress();
+            updateAnsweredCount();
+        }
+
+        function renderPalette() {
+            let html = '';
+            QUESTIONS.forEach((q, i) => {
+                const answered = state.answers[i] !== null;
+                const active = i === state.current;
+                let cls = 'palette-btn';
+                if (active) cls += ' active-q';
+                if (answered) cls += ' answered';
+                html += `<button class="${cls}" data-qidx="${i}" aria-label="Go to question ${i+1}" role="listitem">${i+1}</button>`;
+            });
+            paletteGrid.innerHTML = html;
+            paletteGrid.querySelectorAll('.palette-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (state.submitted) return;
+                    const idx = parseInt(btn.dataset.qidx);
+                    state.current = idx;
+                    renderQuestion();
+                    renderPalette();
+                    updateProgress();
+                });
+            });
+            const answeredTotal = state.answers.filter(a => a !== null).length;
+            paletteAnswered.textContent = answeredTotal;
+        }
+
+        function updateProgress() {
+            const total = QUESTIONS.length;
+            const answered = state.answers.filter(a => a !== null).length;
+            const pct = total > 0 ? Math.round((answered / total) * 100) : 0;
+            progressBar.style.width = pct + '%';
+            progressBar.setAttribute('aria-valuenow', pct);
+            progressLabel.innerHTML =
+                `Question <strong>${state.current + 1}</strong> of <strong>${total}</strong>`;
+            answeredCount.textContent = `${answered} answered`;
+        }
+
+        function updateAnsweredCount() {
+            const answered = state.answers.filter(a => a !== null).length;
+            paletteAnswered.textContent = answered;
+            answeredCount.textContent = `${answered} answered`;
+        }
+
+        // ─── TIMER ───
+        function startTimer() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            updateTimerDisplay();
+            state.timerInterval = setInterval(() => {
+                if (state.submitted) {
+                    clearInterval(state.timerInterval);
+                    return;
+                }
+                state.timer--;
+                updateTimerDisplay();
+                if (state.timer <= 0) {
+                    clearInterval(state.timerInterval);
+                    autoSubmit();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(state.timer / 60);
+            const secs = state.timer % 60;
+            timerDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            timerBox.classList.remove('warning', 'danger');
+            if (state.timer <= 60) {
+                timerBox.classList.add('danger');
+            } else if (state.timer <= 300) {
+                timerBox.classList.add('warning');
+            }
+            timerBox.setAttribute('aria-label', `Time remaining ${mins} minutes and ${secs} seconds`);
+        }
+
+        function autoSubmit() {
+            if (state.submitted) return;
+            state.submitted = true;
+            clearInterval(state.timerInterval);
+            showResults();
+        }
+
+        // ─── SUBMIT ───
+        function handleSubmit() {
+            if (state.submitted) return;
+            state.submitted = true;
+            clearInterval(state.timerInterval);
+            showResults();
+        }
+
+        // ─── RESULTS ───
+        function showResults() {
+            state.reviewMode = true;
+            document.querySelector('.exam-header').style.display = 'none';
+            document.querySelector('.progress-track').style.display = 'none';
+            document.querySelector('.nav-buttons').style.display = 'none';
+            document.querySelector('.palette-section').style.display = 'none';
+            submitBtn.style.display = 'none';
+
+            let correct = 0,
+                wrong = 0,
+                unanswered = 0;
+            const details = [];
+            QUESTIONS.forEach((q, i) => {
+                const ans = state.answers[i];
+                const userLetter = ans !== null ? LETTERS[ans] : '—';
+                const correctLetter = LETTERS[q.correct];
+                let status = 'UNANSWERED';
+                if (ans === null) {
+                    unanswered++;
+                } else if (ans === q.correct) {
+                    correct++;
+                    status = '✅ CORRECT';
+                } else {
+                    wrong++;
+                    status = '❌ WRONG';
+                }
+                details.push({ user: userLetter, correct: correctLetter, status: status });
+            });
+
+            scoreNum.textContent = correct;
+            correctCount.textContent = correct;
+            wrongCount.textContent = wrong;
+            unansweredCount.textContent = unanswered;
+
+            const pct = Math.round((correct / QUESTIONS.length) * 100);
+            let msg = '';
+            if (pct >= 80) msg = '💖 You\'re a star! I\'m so lucky to have you. Forgive me?';
+            else if (pct >= 60) msg = '💕 Good job, love! I promise to remember our anniversary next time.';
+            else if (pct >= 40) msg = '🌸 Not bad at all! I\'ll make it up to you with a nice dinner.';
+            else msg = '💗 I know I messed up, but you\'re still my everything. Let\'s try again?';
+            resultMessage.textContent = msg;
+
+            resultsContainer.style.display = 'block';
+            renderQuestion();
+            renderPalette();
+            progressBar.style.width = '100%';
+            progressBar.setAttribute('aria-valuenow', 100);
+
+            // ─── Save to history ───
+            const entry = {
+                name: state.candidateName,
+                timestamp: Date.now(),
+                score: correct,
+                total: QUESTIONS.length,
+                correct: correct,
+                wrong: wrong,
+                unanswered: unanswered,
+                details: details
+            };
+            saveHistoryEntry(entry);
+        }
+
+        // ─── DOWNLOAD CURRENT RESULTS ───
+        function downloadCurrentResults() {
+            // build from current state
+            const lines = [];
+            const now = new Date();
+            const dateStr = now.toLocaleString();
+            lines.push('═══════════════════════════════════════════');
+            lines.push(`  💕 CBT RESULTS – ${state.candidateName || 'My Love'}`);
+            lines.push('═══════════════════════════════════════════');
+            lines.push(`Date: ${dateStr}`);
+            lines.push(`Candidate: ${state.candidateName || 'Anonymous'}`);
+            lines.push(`Total Questions: ${QUESTIONS.length}`);
+            const correct = parseInt(correctCount.textContent);
+            const wrong = parseInt(wrongCount.textContent);
+            const unanswered = parseInt(unansweredCount.textContent);
+            lines.push(`Correct:   ${correct}`);
+            lines.push(`Wrong:     ${wrong}`);
+            lines.push(`Unanswered: ${unanswered}`);
+            const pct = Math.round((correct / QUESTIONS.length) * 100);
+            lines.push(`Score:     ${correct}/${QUESTIONS.length}  (${pct}%)`);
+            lines.push('');
+            lines.push('─── DETAILED BREAKDOWN ───');
+            QUESTIONS.forEach((q, i) => {
+                const ans = state.answers[i];
+                const userLetter = ans !== null ? LETTERS[ans] : '—';
+                const correctLetter = LETTERS[q.correct];
+                const status = ans === null ? 'UNANSWERED' :
+                    (ans === q.correct ? '✅ CORRECT' : '❌ WRONG');
+                lines.push(`Q${i+1}. ${status}  (Your: ${userLetter} | Correct: ${correctLetter})`);
+            });
+            lines.push('');
+            lines.push('─── With love and apologies ❤️ ───');
+
+            const content = lines.join('\n');
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download =
+                `CBT_Results_${state.candidateName.replace(/\s+/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        downloadTxtBtn.addEventListener('click', downloadCurrentResults);
+
+        // ─── RESTART ───
+        function restartExam() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            state.answers.fill(null);
+            state.submitted = false;
+            state.reviewMode = false;
+            state.timer = 30 * 60;
+            resultsContainer.style.display = 'none';
+            document.querySelector('.exam-header').style.display = 'flex';
+            document.querySelector('.progress-track').style.display = 'block';
+            document.querySelector('.nav-buttons').style.display = 'flex';
+            document.querySelector('.palette-section').style.display = 'block';
+            submitBtn.style.display = 'inline-flex';
+            state.current = 0;
+            renderQuestion();
+            renderPalette();
+            updateProgress();
+            updateAnsweredCount();
+            startTimer();
+            document.querySelectorAll('.option-item').forEach(el => {
+                el.classList.remove('correct-reveal', 'wrong-reveal');
+            });
+            // close history
+            historyPanel.classList.remove('visible');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        restartBtn.addEventListener('click', restartExam);
+
+        // ─── NAV ───
+        function goPrev() {
+            if (state.submitted) return;
+            if (state.current > 0) {
+                state.current--;
+                renderQuestion();
+                renderPalette();
+                updateProgress();
+            }
+        }
+
+        function goNext() {
+            if (state.submitted) return;
+            if (state.current < QUESTIONS.length - 1) {
+                state.current++;
+                renderQuestion();
+                renderPalette();
+                updateProgress();
+            }
+        }
+
+        prevBtn.addEventListener('click', goPrev);
+        nextBtn.addEventListener('click', goNext);
+        submitBtn.addEventListener('click', handleSubmit);
+
+        // ─── KEYBOARD ───
+        document.addEventListener('keydown', (e) => {
+            if (!state.started || state.submitted) return;
+            const num = parseInt(e.key);
+            if (num >= 1 && num <= 4) {
+                const optItems = document.querySelectorAll('.option-item');
+                if (optItems[num - 1]) {
+                    e.preventDefault();
+                    optItems[num - 1].click();
+                }
+            }
+            if (e.key === 'ArrowLeft') { e.preventDefault();
+                goPrev(); }
+            if (e.key === 'ArrowRight') { e.preventDefault();
+                goNext(); }
+        });
+
+        // ─── READY ───
+        examUi.classList.remove('visible');
+        console.log('💖 For Peter Ifeoma Judith – with auto-saved history! 💖');
+    </script>
+</body>
+</html>

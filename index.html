@@ -3,2004 +3,1468 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💕 Tough CBT Exam – For Peter Ifeoma Judith</title>
-    <meta name="description" content="50 tough research exam questions with auto-saved history." />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+    <title>ESUT CBT – Pharmacology 2nd Year 1st Semester</title>
+    <meta name="description" content="Computer-Based Test (CBT) for Pharmacology 2nd Year 1st Semester – ESUT Nursing Students. 50 questions, 1-hour timer, auto-save, and detailed results." />
+    <link rel="canonical" href="https://cbt.esut.edu.ng/pharmacology-set20" />
 
-    <!-- Bootstrap 5 + Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="ESUT CBT – Pharmacology Set 20" />
+    <meta property="og:description" content="Computer-Based Test for Pharmacology 2nd Year 1st Semester – ESUT Nursing Students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cbt.esut.edu.ng/pharmacology-set20" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ESUT CBT – Pharmacology Set 20" />
+    <meta name="twitter:description" content="Computer-Based Test for Pharmacology 2nd Year 1st Semester – ESUT Nursing Students." />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "ESUT CBT – Pharmacology Set 20",
+            "description": "Computer-Based Test for Pharmacology 2nd Year 1st Semester – ESUT Nursing Students.",
+            "applicationCategory": "Educational",
+            "operatingSystem": "All"
+        }
+    </script>
+
+    <!-- Bootstrap 5 + Icons + Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-
-    <!-- Google Font (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 
+    <!-- Motion One CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js">
+    </script>
+
     <style>
+        /* ── Reset & Base ── */
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         :root {
-            --rose: #e8436e;
-            --rose-light: #fce4ec;
-            --rose-soft: #f8d7e0;
-            --rose-glow: #f06292;
-            --cream: #fff5f7;
-            --love-shadow: 0 12px 40px rgba(232, 67, 110, 0.18);
+            --bg: #f0f4fc;
+            --surface: rgba(255, 255, 255, 0.70);
+            --surface-border: rgba(255, 255, 255, 0.25);
+            --text: #1a1a2e;
+            --text-muted: #4a4a6a;
+            --primary: #4f46e5;
+            --primary-light: #818cf8;
+            --primary-dark: #3730a3;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
             --radius: 20px;
-            --primary: #e8436e;
-            --primary-hover: #d6335a;
-            --primary-light: #fce4ec;
-            --success: #2e7d32;
-            --danger: #c62828;
-            --gray-100: #fdf8f9;
-            --gray-200: #f0e6e8;
-            --gray-300: #e0d0d4;
-            --gray-600: #8a7a7e;
-            --gray-800: #3d2c30;
+            --radius-sm: 12px;
+            --transition: 0.25s ease;
+        }
+        [data-bs-theme="dark"] {
+            --bg: #0f0f1a;
+            --surface: rgba(30, 30, 50, 0.80);
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --text: #e8e8f0;
+            --text-muted: #a0a0b8;
+            --shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(145deg, #fdf6f7 0%, #fce4ec 100%);
-            color: var(--gray-800);
-            padding: 20px;
+            background: var(--bg);
+            color: var(--text);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            -webkit-font-smoothing: antialiased;
+            transition: background var(--transition), color var(--transition);
+            padding: 20px;
         }
-        :focus-visible {
-            outline: 3px solid var(--rose);
-            outline-offset: 2px;
-            border-radius: 6px;
-        }
-        .cbt-wrapper {
-            max-width: 960px;
-            width: 100%;
-            margin: 0 auto;
-        }
-        .cbt-card {
-            background: #ffffff;
+        /* ── Glassmorphism ── */
+        .glass {
+            background: var(--surface);
+            backdrop-filter: blur(16px) saturate(1.2);
+            -webkit-backdrop-filter: blur(16px) saturate(1.2);
+            border: 1px solid var(--surface-border);
             border-radius: var(--radius);
-            box-shadow: var(--love-shadow), 0 0 0 1px rgba(232, 67, 110, 0.08);
-            padding: 32px 28px;
-            border: 1px solid rgba(232, 67, 110, 0.12);
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: background var(--transition), border var(--transition), box-shadow var(--transition);
         }
-        .cbt-card::before {
-            content: '💕';
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            font-size: 4rem;
-            opacity: 0.08;
-            transform: rotate(15deg);
-            pointer-events: none;
+        .glass-sm {
+            border-radius: var(--radius-sm);
         }
-        .cbt-card::after {
-            content: '✨';
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            font-size: 3rem;
-            opacity: 0.06;
-            pointer-events: none;
-        }
-        @media (max-width: 576px) {
-            .cbt-card {
-                padding: 20px 16px;
-                border-radius: 14px;
-            }
-            body {
-                padding: 12px;
-            }
-        }
-
-        /* ─── Floating hearts background ─── */
-        .hearts-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-        .heart-float {
-            position: absolute;
-            font-size: 1.2rem;
-            opacity: 0.12;
-            animation: floatHeart 20s infinite linear;
-            color: var(--rose);
-        }
-        @keyframes floatHeart {
-            0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.6);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.12;
-            }
-            90% {
-                opacity: 0.12;
-            }
-            100% {
-                transform: translateY(-20vh) rotate(720deg) scale(1.2);
-                opacity: 0;
-            }
-        }
-
-        /* ─── Welcome overlay ─── */
-        .welcome-overlay {
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(8px);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            border: 2px solid rgba(232, 67, 110, 0.15);
-        }
-        .welcome-overlay.hidden {
-            opacity: 0;
-            transform: scale(0.96);
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: var(--radius);
-        }
-        .welcome-box {
-            max-width: 480px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .welcome-box .love-icon {
-            font-size: 3.2rem;
-            animation: pulseLove 2s infinite ease-in-out;
-            display: block;
-            margin-bottom: 4px;
-        }
-        @keyframes pulseLove {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-        .welcome-box h1 {
-            font-weight: 700;
-            font-size: 2rem;
-            color: var(--rose);
-            letter-spacing: -0.02em;
-        }
-        .welcome-box h1 .name-highlight {
-            background: linear-gradient(135deg, var(--rose), #d63384);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .welcome-box .sub {
-            color: var(--gray-600);
-            margin-bottom: 4px;
-            font-size: 0.95rem;
-        }
-        .welcome-box .quote {
-            font-style: italic;
-            color: var(--rose);
-            background: var(--rose-light);
-            padding: 12px 20px;
-            border-radius: 40px;
-            font-size: 0.95rem;
-            margin: 14px 0 22px;
-            border-left: 4px solid var(--rose);
-            font-weight: 500;
-        }
-        .welcome-box .quote i {
-            color: var(--rose);
-            margin: 0 4px;
-        }
-        .welcome-box .form-control {
-            border-radius: 40px;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border: 2px solid var(--gray-200);
-            transition: 0.2s;
-            text-align: center;
-            background: #fff;
-        }
-        .welcome-box .form-control:focus {
-            border-color: var(--rose);
-            box-shadow: 0 0 0 4px rgba(232, 67, 110, 0.12);
-        }
-        .welcome-box .form-control::placeholder {
-            color: #c0a8ae;
-        }
-        .welcome-box .btn-start {
-            border-radius: 40px;
-            padding: 14px 32px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            width: 100%;
-            background: linear-gradient(135deg, var(--rose), #d63384);
+        /* ── Buttons ── */
+        .btn-primary-cbt {
+            background: var(--primary);
             border: none;
             color: #fff;
-            transition: 0.25s;
-            margin-top: 12px;
-            letter-spacing: 0.02em;
-            box-shadow: 0 4px 16px rgba(232, 67, 110, 0.3);
-        }
-        .welcome-box .btn-start:hover:not(:disabled) {
-            transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 8px 24px rgba(232, 67, 110, 0.4);
-        }
-        .welcome-box .btn-start:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        /* ─── Exam UI ─── */
-        .exam-ui {
-            display: none;
-            position: relative;
-            z-index: 1;
-        }
-        .exam-ui.visible {
-            display: block;
-            animation: fadeInUp 0.5s ease;
-        }
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ─── Header ─── */
-        .exam-header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 2px solid var(--gray-200);
-        }
-        .exam-title {
-            font-weight: 700;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            color: var(--rose);
-        }
-        .exam-title .candidate {
-            font-weight: 500;
-            font-size: 0.85rem;
-            color: var(--gray-600);
-            background: var(--rose-light);
-            padding: 4px 16px;
-            border-radius: 40px;
-            border: 1px solid rgba(232, 67, 110, 0.2);
-        }
-        .exam-title .heart-small {
-            color: var(--rose);
-            font-size: 1.1rem;
-        }
-        .header-actions {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        .btn-history {
-            border-radius: 40px;
-            padding: 6px 16px;
-            font-size: 0.85rem;
-            background: var(--rose-light);
-            border: 1px solid rgba(232, 67, 110, 0.2);
-            color: var(--rose);
+            padding: 10px 28px;
+            border-radius: 50px;
             font-weight: 600;
-            transition: 0.2s;
+            transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
         }
-        .btn-history:hover {
-            background: var(--rose);
+        .btn-primary-cbt:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.35);
             color: #fff;
         }
-        .timer-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .btn-primary-cbt:active {
+            transform: scale(0.97);
+        }
+        .btn-outline-cbt {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 22px;
+            border-radius: 50px;
             font-weight: 600;
-            font-size: 1.2rem;
-            background: var(--rose-light);
-            padding: 8px 18px 8px 14px;
-            border-radius: 40px;
-            border: 1px solid rgba(232, 67, 110, 0.2);
-            color: var(--rose);
+            transition: background 0.2s, color 0.2s;
         }
-        .timer-box .time {
-            font-variant-numeric: tabular-nums;
-            min-width: 60px;
-            text-align: center;
-        }
-        .timer-box.warning {
-            background: #fff3cd;
-            border-color: #ffc107;
-            color: #856404;
-        }
-        .timer-box.danger {
-            background: #f8d7da;
-            border-color: var(--danger);
-            color: #721c24;
-            animation: pulse-bg 1.2s infinite;
-        }
-        @keyframes pulse-bg {
-            0%,
-            100% {
-                background: #f8d7da;
-            }
-            50% {
-                background: #f1c0c0;
-            }
-        }
-
-        /* ─── Progress ─── */
-        .progress-track {
-            margin-bottom: 22px;
-        }
-        .progress-track .meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--gray-600);
-            margin-bottom: 6px;
-        }
-        .progress {
-            height: 8px;
-            border-radius: 20px;
-            background: var(--gray-200);
-        }
-        .progress-bar {
-            border-radius: 20px;
-            background: linear-gradient(90deg, var(--rose), var(--rose-glow));
-            transition: width 0.3s ease;
-        }
-
-        /* ─── Question ─── */
-        .question-number {
-            display: inline-block;
-            font-weight: 600;
-            font-size: 0.8rem;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            color: var(--rose);
-            background: var(--rose-light);
-            padding: 4px 14px;
-            border-radius: 40px;
-            margin-bottom: 12px;
-        }
-        .question-text {
-            font-size: 1.05rem;
-            font-weight: 500;
-            line-height: 1.6;
-            margin-bottom: 24px;
-            min-height: 3.2rem;
-            color: var(--gray-800);
-        }
-
-        /* ─── Options ─── */
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 28px;
-        }
-        .option-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px 18px;
-            border: 2px solid var(--gray-200);
-            border-radius: 14px;
-            cursor: pointer;
-            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-            background: #fff;
-            font-weight: 500;
-            user-select: none;
-        }
-        .option-item:hover {
-            border-color: var(--rose-glow);
-            background: var(--cream);
-        }
-        .option-item .letter {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--gray-200);
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--gray-800);
-            flex-shrink: 0;
-            transition: 0.15s;
-        }
-        .option-item.selected {
-            border-color: var(--rose);
-            background: var(--rose-light);
-            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.15);
-        }
-        .option-item.selected .letter {
-            background: var(--rose);
+        .btn-outline-cbt:hover {
+            background: var(--primary);
             color: #fff;
         }
-        .option-item.correct-reveal {
-            border-color: var(--success);
-            background: #dff0d8;
-        }
-        .option-item.correct-reveal .letter {
-            background: var(--success);
-            color: #fff;
-        }
-        .option-item.wrong-reveal {
-            border-color: var(--danger);
-            background: #f8d7da;
-        }
-        .option-item.wrong-reveal .letter {
-            background: var(--danger);
-            color: #fff;
-        }
-        .option-item input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-            pointer-events: none;
-        }
-
-        /* ─── Nav ─── */
-        .nav-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 8px;
-        }
-        .btn {
-            font-weight: 600;
-            font-size: 0.9rem;
-            padding: 10px 22px;
-            border-radius: 40px;
-            border: 2px solid transparent;
-            transition: 0.2s;
-        }
-        .btn-outline-secondary {
-            border-color: var(--gray-300);
-            color: var(--gray-800);
-        }
-        .btn-outline-secondary:hover {
-            background: var(--gray-200);
-            border-color: var(--gray-600);
-        }
-        .btn-rose {
-            background: var(--rose);
-            border-color: var(--rose);
-            color: #fff;
-        }
-        .btn-rose:hover {
-            background: var(--primary-hover);
-            border-color: var(--primary-hover);
-            color: #fff;
-        }
-        .btn-success {
-            background: var(--success);
-            border-color: var(--success);
-            color: #fff;
-        }
-        .btn-danger {
-            background: var(--danger);
-            border-color: var(--danger);
-            color: #fff;
-        }
-
-        /* ─── Palette ─── */
-        .palette-section {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 2px solid var(--gray-200);
-        }
-        .palette-title {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: var(--gray-600);
-            margin-bottom: 12px;
-        }
-        .palette-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+        /* ── Question palette ── */
         .palette-btn {
             width: 40px;
             height: 40px;
-            border-radius: 12px;
-            border: 2px solid var(--gray-200);
-            background: #fff;
+            border-radius: 10px;
+            border: 2px solid transparent;
             font-weight: 600;
             font-size: 0.85rem;
-            color: var(--gray-800);
-            transition: 0.15s;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .palette-btn:hover {
-            border-color: var(--rose-glow);
-            transform: scale(1.05);
-        }
-        .palette-btn.active-q {
-            border-color: var(--rose);
-            background: var(--rose-light);
-            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.2);
-        }
-        .palette-btn.answered {
-            background: var(--rose);
-            border-color: var(--rose);
-            color: #fff;
-        }
-        .palette-btn.answered.active-q {
-            background: var(--rose);
-            border-color: var(--rose);
-            color: #fff;
-            box-shadow: 0 0 0 3px rgba(232, 67, 110, 0.4);
-        }
-
-        /* ─── Results ─── */
-        .result-box {
-            text-align: center;
-            padding: 20px 0 8px;
-        }
-        .result-box .score-circle {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background: var(--rose-light);
-            border: 6px solid var(--rose);
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--rose);
-            margin-bottom: 20px;
-            position: relative;
+            cursor: pointer;
+            transition: all 0.15s;
+            background: rgba(79, 70, 229, 0.08);
+            color: var(--text);
         }
-        .result-box .score-circle .denominator {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--gray-600);
+        .palette-btn:hover {
+            transform: scale(1.05);
         }
-        .result-box .score-circle .heart-badge {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            font-size: 1.8rem;
-            animation: pulseLove 2s infinite;
+        .palette-btn.answered {
+            background: var(--success);
+            color: #fff;
+            border-color: var(--success);
         }
-        .result-stats {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 24px 40px;
-            margin: 20px 0 24px;
+        .palette-btn.current {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+            background: var(--primary);
+            color: #fff;
         }
-        .result-stats .stat {
-            text-align: center;
-        }
-        .result-stats .stat .num {
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-        .result-stats .stat.correct .num {
-            color: var(--success);
-        }
-        .result-stats .stat.wrong .num {
+        .palette-btn.unanswered {
+            background: rgba(239, 68, 68, 0.10);
+            border-color: rgba(239, 68, 68, 0.3);
             color: var(--danger);
         }
-        .result-stats .stat.unanswered .num {
-            color: var(--gray-600);
-        }
-        .result-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 16px;
-        }
-        .result-message-love {
-            font-size: 1.1rem;
-            color: var(--rose);
-            background: var(--rose-light);
-            padding: 10px 20px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-top: 6px;
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ─── History panel ─── */
-        .history-panel {
-            display: none;
-            background: #fff;
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-top: 24px;
-            border: 2px solid var(--rose-light);
-            box-shadow: var(--love-shadow);
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        .history-panel.visible {
+        /* ── Options ── */
+        .option-label {
             display: block;
-            animation: fadeSlide 0.3s ease;
+            padding: 12px 18px;
+            border-radius: var(--radius-sm);
+            border: 2px solid rgba(79, 70, 229, 0.12);
+            cursor: pointer;
+            transition: all 0.15s;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.3);
         }
-        .history-panel h3 {
-            color: var(--rose);
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: flex;
-            justify-content: space-between;
+        .option-label:hover {
+            border-color: var(--primary-light);
+            background: rgba(79, 70, 229, 0.04);
+        }
+        .option-label input[type="radio"] {
+            display: none;
+        }
+        .option-label.selected {
+            border-color: var(--primary);
+            background: rgba(79, 70, 229, 0.10);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+        }
+        [data-bs-theme="dark"] .option-label {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        /* ── Timer ── */
+        .timer-ring {
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 6px 18px;
+            border-radius: 50px;
+            background: rgba(239, 68, 68, 0.08);
+            color: var(--danger);
         }
-        .history-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
+        .timer-ring.warning {
+            animation: pulse-timer 1s infinite;
         }
-        .history-table th {
-            background: var(--rose-light);
-            color: var(--gray-800);
-            padding: 10px 12px;
-            text-align: left;
-            font-weight: 600;
-        }
-        .history-table td {
-            padding: 8px 12px;
-            border-bottom: 1px solid var(--gray-200);
-        }
-        .history-table tr:hover {
-            background: var(--cream);
-        }
-        .history-table .badge-score {
-            background: var(--rose);
-            color: #fff;
-            padding: 2px 10px;
-            border-radius: 40px;
-            font-weight: 600;
-        }
-        .history-empty {
-            text-align: center;
-            color: var(--gray-600);
-            padding: 20px 0;
-        }
-        .btn-download-history {
-            font-size: 0.8rem;
-            padding: 2px 10px;
-            border-radius: 40px;
-            background: var(--gray-200);
-            border: none;
-            transition: 0.2s;
-        }
-        .btn-download-history:hover {
-            background: var(--rose);
-            color: #fff;
-        }
-
-        /* ─── Utilities ─── */
-        .fade-transition {
-            animation: fadeSlide 0.3s ease;
-        }
-        @keyframes fadeSlide {
-            0% {
-                opacity: 0;
-                transform: translateY(8px);
-            }
+        @keyframes pulse-timer {
+            0%,
             100% {
                 opacity: 1;
-                transform: translateY(0);
+            }
+            50% {
+                opacity: 0.4;
             }
         }
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
+        /* ── Misc ── */
+        .result-badge {
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
         }
-        @media (max-width: 480px) {
-            .palette-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 0.75rem;
-            }
-            .question-text {
-                font-size: 0.95rem;
-            }
-            .welcome-box h1 {
-                font-size: 1.7rem;
-            }
-            .welcome-box .love-icon {
-                font-size: 2.8rem;
-            }
-            .history-table {
-                font-size: 0.75rem;
-            }
-            .history-table th,
-            .history-table td {
-                padding: 6px 8px;
-            }
+        .result-badge.pass {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
         }
-        @media print {
-            .cbt-card {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-            .timer-box,
-            .nav-buttons,
-            .palette-section,
-            .welcome-overlay,
-            .hearts-bg,
-            .history-panel {
-                display: none !important;
-            }
+        .result-badge.fail {
+            background: rgba(239, 68, 68, 0.12);
+            color: var(--danger);
         }
-        .palette-grid {
-            max-height: 160px;
+        .scrollable-palette {
+            max-height: 360px;
             overflow-y: auto;
             padding-right: 4px;
         }
-        .palette-grid::-webkit-scrollbar {
+        .scrollable-palette::-webkit-scrollbar {
             width: 4px;
         }
-        .palette-grid::-webkit-scrollbar-track {
-            background: var(--gray-200);
-            border-radius: 10px;
+        .scrollable-palette::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 8px;
         }
-        .palette-grid::-webkit-scrollbar-thumb {
-            background: var(--rose-glow);
-            border-radius: 10px;
+        /* ── Responsive ── */
+        @media (max-width: 576px) {
+            .glass {
+                border-radius: var(--radius-sm);
+                padding: 16px !important;
+            }
+            .palette-btn {
+                width: 34px;
+                height: 34px;
+                font-size: 0.75rem;
+            }
+            .timer-ring {
+                font-size: 0.9rem;
+                padding: 4px 12px;
+            }
         }
-        .history-panel::-webkit-scrollbar {
-            width: 6px;
+        /* ── Theme toggle ── */
+        .theme-toggle {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 50px;
+            padding: 6px 12px;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1.1rem;
         }
-        .history-panel::-webkit-scrollbar-track {
-            background: var(--gray-200);
-            border-radius: 10px;
+        .theme-toggle:hover {
+            transform: scale(1.04);
         }
-        .history-panel::-webkit-scrollbar-thumb {
-            background: var(--rose-glow);
-            border-radius: 10px;
+        /* ── Focus ── */
+        :focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+        /* ── Hidden ── */
+        .hidden {
+            display: none !important;
+        }
+        /* ── Progress bar ── */
+        .progress-cbt {
+            height: 6px;
+            border-radius: 8px;
+            background: rgba(79, 70, 229, 0.12);
+            overflow: hidden;
+        }
+        .progress-cbt .bar {
+            height: 100%;
+            border-radius: 8px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        /* ── Result chart bar ── */
+        .stat-bar {
+            height: 8px;
+            border-radius: 6px;
+            background: rgba(79, 70, 229, 0.10);
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .stat-bar .fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.8s ease;
+        }
+        /* ── Print ── */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: #fff !important;
+                padding: 0 !important;
+            }
+            .glass {
+                background: #fff !important;
+                backdrop-filter: none !important;
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+            .result-badge.pass {
+                background: #d4edda !important;
+                color: #155724 !important;
+            }
+            .result-badge.fail {
+                background: #f8d7da !important;
+                color: #721c24 !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ─── Floating hearts ─── -->
-    <div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
+    <div id="app" class="container py-3 py-md-4" style="max-width:1100px;">
 
-    <div class="cbt-wrapper" role="main">
-        <div class="cbt-card" id="app">
+        <!-- ─── HEADER ─── -->
+        <header class="d-flex justify-content-between align-items-center mb-3 no-print">
+            <div>
+                <span class="fw-bold" style="color:var(--primary);">🕊️ ESUT CBT</span>
+                <span class="text-muted ms-2" style="font-size:0.85rem;">Pharmacology · Set 20</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="theme-toggle no-print" id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill" id="themeIcon"></i>
+                </button>
+            </div>
+        </header>
 
-            <!-- ─── WELCOME OVERLAY ─── -->
-            <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
-                <div class="welcome-box">
-                    <span class="love-icon">💖</span>
-                    <h1 id="welcomeTitle">
-                        For <span class="name-highlight">Peter Ifeoma Judith</span> 💕
-                    </h1>
-                    <p class="sub">✨ Research Methods · 50 Tough Questions · 60 Minutes ✨</p>
-                    <div class="quote">
-                        <i>“</i> Sorry for forgetting our monthly anniversary… let me make it up to you with this tough exam. <i>”</i>
-                        <br /><span style="font-size:0.8rem;color:var(--gray-600);">— With love, always ❤️</span>
-                    </div>
-                    <label for="candidateName" class="form-label fw-semibold" style="color:var(--gray-800);">
-                        Enter your name, my love 💕
-                    </label>
-                    <input type="text" id="candidateName" class="form-control" placeholder="e.g. Peter Ifeoma Judith" autocomplete="name" />
-                    <button class="btn-start" id="startExamBtn" disabled>
-                        <i class="bi bi-heart-fill" style="margin-right:6px;"></i> Start the Exam <i class="bi bi-heart-fill" style="margin-left:6px;"></i>
-                    </button>
-                    <p class="text-muted mt-3 small" style="font-size:0.8rem;">
-                        <i class="bi bi-keyboard"></i> Keyboard: 1‑4 for options, ← → to navigate
-                    </p>
+        <!-- ─── LANDING ─── -->
+        <section id="landing" class="glass p-4 p-md-5 mx-auto" style="max-width:700px;">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold display-6" style="color:var(--primary);">Pharmacology</h1>
+                <p class="text-muted" style="font-size:1.1rem;">2nd Year · 1st Semester · ESUT Nursing</p>
+                <div class="mt-2 d-flex justify-content-center gap-3 flex-wrap">
+                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">⏱️ 60 min</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">📝 50 Qs</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">✅ 1 mark each</span>
                 </div>
             </div>
 
-            <!-- ─── EXAM UI ─── -->
-            <div class="exam-ui" id="examUi">
+            <hr />
 
-                <!-- Header -->
-                <header class="exam-header">
-                    <div class="exam-title">
-                        💕 Tough CBT
-                        <span class="heart-small">❤️</span>
-                        <span class="candidate" id="candidateDisplay">—</span>
+            <div class="mb-4">
+                <h6 class="fw-semibold"><i class="bi bi-info-circle me-1"></i> Instructions</h6>
+                <ul class="text-muted small" style="padding-left:1.2rem;line-height:1.7;">
+                    <li>Read each question carefully before selecting an answer.</li>
+                    <li>Each question carries <strong>1 mark</strong>. No negative marking.</li>
+                    <li>You can navigate using <strong>Previous</strong> / <strong>Next</strong> or the <strong>question palette</strong>.</li>
+                    <li>Your progress is <strong>auto-saved</strong> in your browser.</li>
+                    <li>The test will <strong>auto-submit</strong> when the timer reaches zero.</li>
+                    <li>You may submit manually at any time — a confirmation will appear.</li>
+                </ul>
+            </div>
+
+            <form id="landingForm" novalidate>
+                <div class="mb-3">
+                    <label for="candidateName" class="form-label fw-semibold">Candidate Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-lg" id="candidateName" placeholder="Enter your full name" required aria-required="true" />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="studentId" class="form-label fw-semibold">Student ID <span class="text-muted">(optional)</span></label>
+                    <input type="text" class="form-control form-control-lg" id="studentId" placeholder="e.g. ESUT/2024/1234" />
+                </div>
+                <button type="submit" class="btn btn-primary-cbt w-100 py-3" id="startBtn">
+                    <i class="bi bi-play-circle me-2"></i> Start Test
+                </button>
+            </form>
+            <div class="mt-3 text-center">
+                <button class="btn btn-link btn-sm text-muted no-print" id="clearHistoryBtn" style="text-decoration:none;">
+                    <i class="bi bi-trash3 me-1"></i> Clear History
+                </button>
+            </div>
+        </section>
+
+        <!-- ─── EXAM ─── -->
+        <section id="exam" class="hidden">
+            <div class="glass p-3 p-md-4 mb-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                    <div>
+                        <span class="fw-semibold" id="examNameDisplay">Candidate: </span>
+                        <span class="text-muted ms-2" id="examIdDisplay"></span>
                     </div>
-                    <div class="header-actions">
-                        <button class="btn-history" id="toggleHistoryBtn" aria-label="View score history">
-                            <i class="bi bi-clock-history"></i> History
-                        </button>
-                        <div class="timer-box" id="timerBox" role="timer" aria-live="polite">
-                            <i class="bi bi-clock" aria-hidden="true"></i>
-                            <span class="time" id="timerDisplay">60:00</span>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="text-muted small" id="progressDisplay">0 / 50</span>
+                        <div class="timer-ring" id="timerDisplay">
+                            <i class="bi bi-clock"></i>
+                            <span id="timerText">60:00</span>
                         </div>
                     </div>
-                </header>
+                </div>
+                <div class="progress-cbt mt-2">
+                    <div class="bar" id="examProgressBar" style="width:0%;"></div>
+                </div>
+            </div>
 
-                <!-- Progress -->
-                <div class="progress-track">
-                    <div class="meta">
-                        <span id="progressLabel">Question <strong id="currentNum">1</strong> of <strong id="totalNum">50</strong></span>
-                        <span id="answeredCount">0 answered</span>
-                    </div>
-                    <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+            <div class="row g-3">
+                <!-- Question area -->
+                <div class="col-lg-8">
+                    <div class="glass p-3 p-md-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2" id="qNumBadge">Q1</span>
+                            <span class="text-muted small" id="qStatusLabel">Unanswered</span>
+                        </div>
+                        <h5 class="fw-semibold mb-4" id="qText">Loading question…</h5>
+                        <div id="optionsContainer" class="d-flex flex-column gap-2"></div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                            <button class="btn btn-outline-cbt no-print" id="prevBtn"><i class="bi bi-chevron-left me-1"></i> Previous</button>
+                            <button class="btn btn-primary-cbt no-print" id="nextBtn">Next <i class="bi bi-chevron-right ms-1"></i></button>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Question -->
-                <section aria-label="Question content">
-                    <div class="question-number" id="qNumBadge">Q1</div>
-                    <div class="question-text" id="questionText" role="heading" aria-level="2">Loading…</div>
-                    <div class="options-list" id="optionsContainer" role="radiogroup" aria-label="Answer options"></div>
-                </section>
-
-                <!-- Navigation -->
-                <nav class="nav-buttons" aria-label="Question navigation">
-                    <div class="btn-group">
-                        <button class="btn btn-outline-secondary" id="prevBtn" aria-label="Previous question"><i class="bi bi-chevron-left"></i> Previous</button>
-                        <button class="btn btn-outline-secondary" id="nextBtn" aria-label="Next question">Next <i class="bi bi-chevron-right"></i></button>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn btn-rose" id="submitBtn"><i class="bi bi-heart-fill"></i> Submit Exam</button>
-                    </div>
-                </nav>
 
                 <!-- Palette -->
-                <section class="palette-section" aria-label="Question navigation palette">
-                    <div class="palette-title">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> Question Palette
-                        <span class="text-muted fw-normal ms-2" style="font-size:0.75rem;text-transform:none;">
-                            (answered <span id="paletteAnswered">0</span>/50)
-                        </span>
+                <div class="col-lg-4">
+                    <div class="glass p-3 p-md-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="fw-semibold">Question Palette</span>
+                            <span class="text-muted small" id="paletteStats">0 answered</span>
+                        </div>
+                        <div class="scrollable-palette" id="paletteContainer" role="list"></div>
+                        <div class="mt-3 pt-3 border-top d-flex flex-wrap gap-2 no-print">
+                            <button class="btn btn-primary-cbt flex-fill" id="submitExamBtn"><i class="bi bi-check2-circle me-1"></i> Submit</button>
+                            <button class="btn btn-outline-cbt flex-fill" id="restartExamBtn"><i class="bi bi-arrow-counterclockwise me-1"></i> Restart</button>
+                        </div>
                     </div>
-                    <div class="palette-grid" id="paletteGrid" role="list"></div>
-                </section>
+                </div>
+            </div>
+        </section>
 
-                <!-- Results -->
-                <div id="resultsContainer" style="display:none;" class="result-box fade-transition" role="region" aria-live="polite">
-                    <div class="score-circle">
-                        <span class="heart-badge">💕</span>
-                        <span id="scoreNum">0</span><span class="denominator">/50</span>
+        <!-- ─── RESULTS ─── -->
+        <section id="results" class="hidden">
+            <div class="glass p-4 p-md-5">
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+                    <div>
+                        <h3 class="fw-bold mb-1">📊 Results</h3>
+                        <p class="text-muted" id="resultSubtext">Pharmacology · Set 20</p>
                     </div>
-                    <h3 id="resultTitle" style="font-weight:700;color:var(--rose);margin-bottom:2px;">
-                        For You, My Love 💖
-                    </h3>
-                    <div class="result-message-love" id="resultMessage">✨ You're amazing! ✨</div>
-                    <div class="result-stats">
-                        <div class="stat correct"><div class="num" id="correctCount">0</div><div class="label">✅ Correct</div></div>
-                        <div class="stat wrong"><div class="num" id="wrongCount">0</div><div class="label">❌ Wrong</div></div>
-                        <div class="stat unanswered"><div class="num" id="unansweredCount">0</div><div class="label">⏭️ Unanswered</div></div>
-                    </div>
-                    <div class="result-actions">
-                        <button class="btn btn-rose" id="downloadTxtBtn"><i class="bi bi-download"></i> Save Results (.txt)</button>
-                        <button class="btn btn-outline-secondary" id="restartBtn"><i class="bi bi-arrow-counterclockwise"></i> Retry</button>
+                    <div class="d-flex gap-2 flex-wrap no-print">
+                        <button class="btn btn-sm btn-outline-cbt" id="printResultBtn"><i class="bi bi-printer"></i> Print</button>
+                        <button class="btn btn-sm btn-outline-cbt" id="pdfResultBtn"><i class="bi bi-file-pdf"></i> PDF</button>
+                        <button class="btn btn-sm btn-outline-cbt" id="jsonResultBtn"><i class="bi bi-file-code"></i> JSON</button>
+                        <button class="btn btn-sm btn-outline-cbt" id="restartFromResultBtn"><i class="bi bi-arrow-counterclockwise"></i> Restart</button>
                     </div>
                 </div>
 
-                <!-- ─── HISTORY PANEL ─── -->
-                <div class="history-panel" id="historyPanel">
-                    <h3>
-                        <span><i class="bi bi-clock-history"></i> Score History</span>
-                        <button class="btn btn-outline-secondary btn-sm" id="closeHistoryBtn" style="border-radius:40px;padding:4px 14px;">Close</button>
-                    </h3>
-                    <div id="historyContent"></div>
+                <!-- Candidate info -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4"><strong>Name</strong><br /><span id="resultName">—</span></div>
+                    <div class="col-md-3"><strong>ID</strong><br /><span id="resultId">—</span></div>
+                    <div class="col-md-3"><strong>Time Used</strong><br /><span id="resultTime">—</span></div>
+                    <div class="col-md-2"><strong>Status</strong><br /><span id="resultStatusBadge" class="result-badge pass">Pass</span></div>
                 </div>
 
-            </div><!-- /exam-ui -->
-        </div><!-- /cbt-card -->
+                <!-- Stats cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-3"><div class="glass-sm p-3 text-center"><div class="fw-bold fs-5" id="rTotal">0</div><small class="text-muted">Total</small></div></div>
+                    <div class="col-6 col-md-3"><div class="glass-sm p-3 text-center"><div class="fw-bold fs-5 text-success" id="rCorrect">0</div><small class="text-muted">Correct</small></div></div>
+                    <div class="col-6 col-md-3"><div class="glass-sm p-3 text-center"><div class="fw-bold fs-5 text-danger" id="rIncorrect">0</div><small class="text-muted">Incorrect</small></div></div>
+                    <div class="col-6 col-md-3"><div class="glass-sm p-3 text-center"><div class="fw-bold fs-5" id="rPercentage">0%</div><small class="text-muted">Percentage</small></div></div>
+                </div>
+
+                <!-- Grade + Pass/Fail + Attempted -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4"><div class="glass-sm p-3"><strong>Grade</strong><br /><span class="fs-5" id="rGrade">—</span></div></div>
+                    <div class="col-md-4"><div class="glass-sm p-3"><strong>Attempted</strong><br /><span class="fs-5" id="rAttempted">0</span></div></div>
+                    <div class="col-md-4"><div class="glass-sm p-3"><strong>Unattempted</strong><br /><span class="fs-5" id="rUnattempted">0</span></div></div>
+                </div>
+
+                <!-- Progress chart (simple bar) -->
+                <div class="mb-4">
+                    <h6 class="fw-semibold">Performance</h6>
+                    <div class="row g-2">
+                        <div class="col-6"><span class="small">Correct</span><div class="stat-bar"><div class="fill bg-success" id="chartCorrect" style="width:0%;"></div></div></div>
+                        <div class="col-6"><span class="small">Incorrect</span><div class="stat-bar"><div class="fill bg-danger" id="chartIncorrect" style="width:0%;"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- Detailed review -->
+                <h6 class="fw-semibold mt-4">Question Review</h6>
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless align-middle" id="reviewTable">
+                        <thead>
+                            <tr><th>#</th><th>Your Answer</th><th>Correct Answer</th><th>Status</th><th>Explanation</th></tr>
+                        </thead>
+                        <tbody id="reviewBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CONFIRM MODAL ─── -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content glass">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold">Submit Test?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You have <span id="modalUnansweredCount">0</span> unanswered question(s).</p>
+                        <p class="mb-0">Are you sure you want to submit your test?</p>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button class="btn btn-outline-cbt" data-bs-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary-cbt" id="confirmSubmitBtn">Yes, Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <script>
-        /* ============================================================
-           TOUGH CBT EXAM – 50 challenging questions
-           ============================================================ */
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
 
-        // ─── 50 TOUGH QUESTIONS based on the research document ───
+    <script>
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  QUESTIONS  (50 from the objective exam)
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         const QUESTIONS = [{
-            id: 1,
-            text: 'Which of the following BEST captures the essence of research as described in the document?',
-            options: [
-                'A) A casual process of gathering opinions from colleagues',
-                'B) A systematic, organized, and controlled process involving observations and analysis to discover truth',
-                'C) A theoretical exercise with no practical application',
-                'D) A method of proving pre-existing beliefs'
+            question: "What is the mechanism of action of permethrin in treating scabies?",
+            options: ["Inhibits cell wall synthesis", "Causes neurological paralysis in insects",
+                "Blocks protein synthesis", "Disrupts DNA replication"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Permethrin causes neurological paralysis in insects by acting on sodium channels."
         }, {
-            id: 2,
-            text: 'The document states that research serves a dual purpose. Which pair BEST represents this duality?',
-            options: [
-                'A) Process and outcome',
-                'B) Theory and practice',
-                'C) Observation and experimentation',
-                'D) Qualitative and quantitative'
-            ],
-            correct: 0
+            question: "A patient with chloroquine-resistant malaria should be treated with which class of drugs that acts on the erythrocytic stage?",
+            options: ["Antifolates", "4-Aminoquinolones", "Amino alcohols", "Sulfonamides"],
+            answer: 1,
+            explanation: "4-Aminoquinolones (e.g., amodiaquine) are used for chloroquine-resistant malaria."
         }, {
-            id: 3,
-            text: 'According to the document, the ultimate goal of research is to:',
-            options: [
-                'A) Publish findings in academic journals',
-                'B) Establish a scientific base of knowledge fundamental to practice',
-                'C) Gain recognition among peers',
-                'D) Fulfill academic requirements'
-            ],
-            correct: 1
+            question: "Which property of lindane is responsible for its CNS toxicity including vertigo and seizures?",
+            options: ["Water solubility", "Lipid solubility", "Acidic nature", "Basic nature"],
+            answer: 1,
+            explanation: "Lindane is lipid-soluble, allowing it to cross the blood-brain barrier and cause CNS toxicity."
         }, {
-            id: 4,
-            text: 'Which of the following statements about "conceptualization" is TRUE according to the document?',
-            options: [
-                'A) It is the process of collecting data from respondents',
-                'B) It is the process of forming ideas, plans, and designs',
-                'C) It is synonymous with operational definition',
-                'D) It refers to testing a hypothesis'
+            question: "A sterilant differs from a disinfectant because a sterilant:",
+            options: ["Only kills vegetative bacteria", "Kills all microbes including spores",
+                "Can only be used on living tissue", "Has no effect on viruses"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Sterilants kill all microbes including spores, while disinfectants do not necessarily kill spores."
         }, {
-            id: 5,
-            text: 'The document distinguishes between "construct" and "concept." Which of the following is a construct?',
-            options: [
-                'A) Height',
-                'B) Weight',
-                'C) Self-care',
-                'D) Temperature'
-            ],
-            correct: 2
+            question: "What concentration of hexachlorophene preparations has been banned due to neurotoxicity?",
+            options: ["0.5%", "1%", "2%", "5%"],
+            answer: 2,
+            explanation: "2% hexachlorophene preparations have been banned due to neurotoxicity concerns."
         }, {
-            id: 6,
-            text: '"Ex post facto" research is characterized by:',
-            options: [
-                'A) Manipulation of variables before the experiment',
-                'B) Confirmation of results after the experiment or from previous data',
-                'C) Use of control groups only',
-                'D) Random assignment of subjects'
-            ],
-            correct: 1
+            question: "In the life cycle of Plasmodium, which stage is responsible for clinical manifestations of malaria?",
+            options: ["Sporozoites", "Schizonts", "Merozoites", "Gametocytes"],
+            answer: 2,
+            explanation: "Merozoites released into the bloodstream cause the clinical manifestations of malaria."
         }, {
-            id: 7,
-            text: 'The "Hawthorne effect" occurs when:',
-            options: [
-                'A) Researchers introduce bias into their analysis',
-                'B) Subjects change their behavior because they are aware of being observed',
-                'C) The sample size is too small to detect significance',
-                'D) Instruments fail to measure what they intend to'
+            question: "What is the characteristic property of chloroxylenol that makes it less tissue-damaging than phenol?",
+            options: ["It is more acidic", "It does not coagulate proteins", "It has higher lipid solubility",
+                "It releases more oxygen"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Chloroxylenol does not coagulate proteins, making it less damaging to tissues."
         }, {
-            id: 8,
-            text: 'Which of the following terms refers to the process of applying sample characteristics to the general population?',
-            options: [
-                'A) Operationalization',
-                'B) Inference',
-                'C) Conceptualization',
-                'D) Randomization'
+            question: "The gametocyte stage of Plasmodium is significant because:",
+            options: ["It causes the clinical symptoms", "It is the stage taken up by mosquitoes for transmission",
+                "It is the only stage found in the liver", "It is resistant to all drugs"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Gametocytes are the sexual stage taken up by mosquitoes, enabling transmission."
         }, {
-            id: 9,
-            text: 'The document defines a "law" as:',
-            options: [
-                'A) A hypothesis that has been tested once',
-                'B) A theory that has been thoroughly tested and has become certain',
-                'C) An untested assumption',
-                'D) A researcher\'s personal belief'
-            ],
-            correct: 1
+            question: "Which oxidizing agent is used for wound debridement due to its ability to loosen and remove slough?",
+            options: ["Potassium permanganate", "Benzoyl peroxide", "Hydrogen peroxide", "Iodine"],
+            answer: 2,
+            explanation: "Hydrogen peroxide liberates nascent oxygen which oxidizes necrotic matter and helps remove slough."
         }, {
-            id: 10,
-            text: '"Response set bias" is best described as:',
-            options: [
-                'A) Bias introduced by the researcher during data collection',
-                'B) Measurement error introduced when individuals respond to items in characteristic ways regardless of content',
-                'C) Bias from selecting a non-representative sample',
-                'D) Bias from poorly worded questions'
-            ],
-            correct: 1
+            question: "The cure rate of permethrin for scabies is approximately:",
+            options: ["50%", "75%", "100%", "25%"],
+            answer: 2,
+            explanation: "Permethrin has a nearly 100% cure rate for scabies with a single application."
         }, {
-            id: 11,
-            text: 'A researcher is studying the effect of a new teaching method on student performance. In this study, student performance is the:',
-            options: [
-                'A) Independent variable',
-                'B) Dependent variable',
-                'C) Moderator variable',
-                'D) Extraneous variable'
-            ],
-            correct: 1
+            question: "What is the primary disadvantage of using benzyl benzoate for scabies treatment?",
+            options: ["Low cure rate", "Skin irritation", "Expensive cost", "Requires multiple applications"],
+            answer: 1,
+            explanation: "Benzyl benzoate causes skin irritation, which has led to a decline in its use."
         }, {
-            id: 12,
-            text: 'Which scenario BEST illustrates a moderator variable?',
-            options: [
-                'A) Smoking causes lung cancer',
-                'B) Mother\'s age affects birth weight, and antenatal care influences this relationship',
-                'C) Teaching method affects student performance',
-                'D) Height is correlated with weight'
-            ],
-            correct: 1
+            question: "Which antimalarial drug class inhibits growth and multiplication at the erythrocytic and gametocyte stages?",
+            options: ["4-Aminoquinolones", "Amino alcohols", "Antifolates", "Artemisinins"],
+            answer: 2,
+            explanation: "Antifolates inhibit growth and multiplication of malaria parasites at both erythrocytic and gametocyte stages."
         }, {
-            id: 13,
-            text: 'In a study on the relationship between mother\'s age and infant diarrhea, the availability of clean water is an example of a(n):',
-            options: [
-                'A) Independent variable',
-                'B) Dependent variable',
-                'C) Extraneous variable',
-                'D) Dichotomous variable'
-            ],
-            correct: 2
+            question: "The safe concentration of potassium permanganate for wound irrigation is:",
+            options: ["1:10", "1:100", "1:400 to 1:1000", "1:10,000"],
+            answer: 2,
+            explanation: "Potassium permanganate is safely used at a dilution of 1:400 to 1:1000 for wound irrigation."
         }, {
-            id: 14,
-            text: 'Which of the following is BOTH a continuous and a categorical variable depending on how it is measured?',
-            options: [
-                'A) Age',
-                'B) Sex',
-                'C) Blood group',
-                'D) Marital status'
-            ],
-            correct: 0
+            question: "Which vaccine is NOT typically included in routine childhood immunization?",
+            options: ["Measles", "Tetanus", "Hepatitis B", "Cholera"],
+            answer: 3,
+            explanation: "Cholera vaccine is not part of routine childhood immunization in most programs."
         }, {
-            id: 15,
-            text: 'A researcher categorizes participants into "urban" and "rural" groups. This is an example of a:',
-            options: [
-                'A) Continuous variable',
-                'B) Dichotomous variable',
-                'C) Discrete variable',
-                'D) Heterogeneous variable'
+            question: "What is the mechanism by which iodine kills microorganisms?",
+            options: ["Coagulates proteins", "Liberates and oxidizes microbial protoplasm",
+                "Inhibits cell wall synthesis", "Blocks DNA replication"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Iodine kills microorganisms by liberating and oxidizing microbial protoplasm."
         }, {
-            id: 16,
-            text: 'When a variable can assume infinite values between two points (e.g., height, weight), it is called a:',
-            options: [
-                'A) Discrete variable',
-                'B) Categorical variable',
-                'C) Continuous variable',
-                'D) Dichotomous variable'
-            ],
-            correct: 2
+            question: "Which Plasmodium species is most commonly found in monkeys?",
+            options: ["P. falciparum (sporozoites)", "P. vivax", "P. ovale", "P. malariae"],
+            answer: 0,
+            explanation: "Sporozoites of Plasmodium falciparum are most commonly found in monkeys."
         }, {
-            id: 17,
-            text: 'The document describes "heterogeneous variable" as:',
-            options: [
-                'A) A variable that takes on only two values',
-                'B) A situation where a group consists of many different kinds with respect to a particular attribute',
-                'C) A variable that has limited variability',
-                'D) A variable that remains constant across subjects'
-            ],
-            correct: 1
+            question: "Passive vaccination is similar to which type of antibiotic?",
+            options: ["Bacteriostatic", "Bactericidal", "Broad-spectrum", "Narrow-spectrum"],
+            answer: 1,
+            explanation: "Passive vaccination provides pre-formed antibodies, similar to bactericidal antibiotics that kill pathogens."
         }, {
-            id: 18,
-            text: 'Which of the following is an example of a discrete variable?',
-            options: [
-                'A) Temperature in degrees Celsius',
-                'B) Number of patients in a ward',
-                'C) Weight in kilograms',
-                'D) Height in centimeters'
-            ],
-            correct: 1
+            question: "What is the main adverse effect of high concentration iodine application on skin?",
+            options: ["Itching", "Burns and blisters", "Rash", "Pigmentation"],
+            answer: 1,
+            explanation: "High concentration iodine causes burns and blisters on the skin."
         }, {
-            id: 19,
-            text: 'In a study examining the relationship between a mother\'s education level and child\'s nutritional status, the mother\'s education is the:',
-            options: [
-                'A) Dependent variable',
-                'B) Independent variable',
-                'C) Moderator variable',
-                'D) Extraneous variable'
+            question: "Crotamiton is preferred over permethrin in children primarily because:",
+            options: ["It has higher cure rate", "It causes less irritation and toxicity", "It is cheaper",
+                "It requires fewer applications"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Crotamiton causes less irritation and toxicity, making it preferred in children despite lower cure rate."
         }, {
-            id: 20,
-            text: 'The document states that nearly all aspects of human beings and their environment vary. This is the fundamental basis for:',
-            options: [
-                'A) Experimental control',
-                'B) The concept of variables',
-                'C) Random sampling',
-                'D) Statistical significance'
-            ],
-            correct: 1
+            question: "The schizont stage of Plasmodium occurs in which organ?",
+            options: ["Heart", "Liver", "Kidney", "Lung"],
+            answer: 1,
+            explanation: "Schizonts reproduce in the liver during the Plasmodium life cycle."
         }, {
-            id: 21,
-            text: 'What is the PRIMARY distinction between basic and applied research according to the document?',
-            options: [
-                'A) Basic research uses animals while applied uses humans',
-                'B) Basic research generates knowledge; applied research solves existing problems',
-                'C) Basic research is quantitative; applied is qualitative',
-                'D) Basic research is conducted in laboratories; applied in natural settings'
+            question: "Disinfectants are used on:",
+            options: ["Living tissue", "Inanimate objects", "Both living and non-living tissue",
+                "Only surgical instruments"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Disinfectants are used on inanimate objects, while antiseptics are used on living tissue."
         }, {
-            id: 22,
-            text: 'The document states that basic and applied research "reciprocate each other." This means:',
-            options: [
-                'A) They are completely independent of each other',
-                'B) They complement and feed into each other in generation and application of knowledge',
-                'C) One is superior to the other',
-                'D) They should never be combined in a single study'
-            ],
-            correct: 1
+            question: "Which of the following is the first-line treatment for scabies?",
+            options: ["Lindane", "Benzyl benzoate", "Permethrin", "Crotamiton"],
+            answer: 2,
+            explanation: "Permethrin is the first-line drug of choice for scabies."
         }, {
-            id: 23,
-            text: 'Experimental research is characterized by all of the following EXCEPT:',
-            options: [
-                'A) Manipulation of independent variables',
-                'B) Control over the experimental group',
-                'C) Randomization of subjects',
-                'D) Absence of a control group'
+            question: "How does potassium permanganate kill bacteria?",
+            options: ["By inhibiting protein synthesis", "By liberating oxygen which oxidizes bacteria",
+                "By disrupting cell membranes", "By blocking DNA replication"
             ],
-            correct: 3
+            answer: 1,
+            explanation: "Potassium permanganate liberates oxygen which oxidizes bacteria."
         }, {
-            id: 24,
-            text: 'Quasi-experimental design differs from true experimental design primarily because it:',
-            options: [
-                'A) Always uses larger sample sizes',
-                'B) Lacks control group and randomization',
-                'C) Cannot be used in nursing research',
-                'D) Only uses qualitative methods'
-            ],
-            correct: 1
+            question: "Which of the following is NOT a species of Plasmodium that causes malaria in humans?",
+            options: ["P. falciparum", "P. vivax", "P. ovale", "P. berghei"],
+            answer: 3,
+            explanation: "P. berghei is a rodent malaria parasite, not a human pathogen."
         }, {
-            id: 25,
-            text: 'Which of the following is a type of quasi-experimental design mentioned in the document?',
-            options: [
-                'A) Cross-sectional survey',
-                'B) Single group design',
-                'C) Case study',
-                'D) Historical research'
+            question: "Active vaccination stimulates the body to:",
+            options: ["Receive pre-formed antibodies", "Produce its own antibodies", "Kill bacteria directly",
+                "Prevent all infections"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Active vaccination stimulates the body to produce its own antibodies."
         }, {
-            id: 26,
-            text: 'A researcher collects data from a group of mothers at one point in time to determine their attitudes toward exclusive breastfeeding. This is an example of:',
-            options: [
-                'A) Longitudinal survey',
-                'B) Cross-sectional survey',
-                'C) Experimental design',
-                'D) Historical research'
-            ],
-            correct: 1
+            question: "Which halogen is commonly used as a disinfectant?",
+            options: ["Fluorine", "Chlorine", "Bromine", "Astatine"],
+            answer: 1,
+            explanation: "Chlorine and iodine (halogens) are commonly used as disinfectants."
         }, {
-            id: 27,
-            text: 'Which research design would be MOST appropriate for studying changes in attitudes over a 10-year period?',
-            options: [
-                'A) Cross-sectional survey',
-                'B) Longitudinal survey',
-                'C) Experimental design',
-                'D) Case study'
-            ],
-            correct: 1
+            question: "The cure rate of permethrin for scabies is nearly:",
+            options: ["50%", "75%", "90%", "100%"],
+            answer: 3,
+            explanation: "Permethrin has a nearly 100% cure rate for scabies."
         }, {
-            id: 28,
-            text: 'Descriptive research is described as providing a "factual descriptive picture" without "intellectual changes of inventing new ideas." This means descriptive research:',
-            options: [
-                'A) Never produces useful findings',
-                'B) Describes phenomena as they are without manipulating them',
-                'C) Always leads to new theories',
-                'D) Is less scientific than experimental research'
+            question: "Gametocytes are important for:",
+            options: ["Causing clinical symptoms", "Transmission of malaria to mosquitoes", "Liver infection",
+                "Drug resistance"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Gametocytes are the sexual stage that enables transmission to mosquitoes."
         }, {
-            id: 29,
-            text: 'Historical research involves all of the following steps EXCEPT:',
-            options: [
-                'A) Comprehensive gathering of data through diaries, maps, and records',
-                'B) Criticism of data to determine authenticity',
-                'C) Manipulation of variables to test cause and effect',
-                'D) Determining relationships among facts and meaning of data'
-            ],
-            correct: 2
+            question: "Which of the following is an oxidizing agent used in wound care?",
+            options: ["Chloroxylenol", "Hydrogen peroxide", "Lindane", "Benzyl benzoate"],
+            answer: 1,
+            explanation: "Hydrogen peroxide is an oxidizing agent used for wound care and debridement."
         }, {
-            id: 30,
-            text: 'A researcher conducts a study to investigate "whether HIV-positive clients are happier being told of their condition than not." This is an example of:',
-            options: [
-                'A) Descriptive research',
-                'B) Exploratory research',
-                'C) Explanatory research',
-                'D) Historical research'
+            question: "A good vaccine should provide:",
+            options: ["Short-term immunity only", "Complete protection against disease",
+                "Immunity against all diseases", "No adverse effects"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "A good vaccine should provide complete protection against the target disease."
         }, {
-            id: 31,
-            text: 'According to the document, the FIRST and most important step in the research process is:',
-            options: [
-                'A) Literature review',
-                'B) Data collection',
-                'C) Identification of the research problem',
-                'D) Hypothesis formulation'
+            question: "Lindane is not recommended as first-line treatment for scabies because:",
+            options: ["It is too expensive", "It has low cure rate and causes CNS toxicity",
+                "It requires multiple applications", "It is not effective against mites"
             ],
-            correct: 2
+            answer: 1,
+            explanation: "Lindane has a low cure rate and causes CNS toxicity, so it's not first-line."
         }, {
-            id: 32,
-            text: 'Which of the following is NOT listed as a source of research problems in the document?',
-            options: [
-                'A) Personal experience',
-                'B) Existing theories',
-                'C) Mass media',
-                'D) Researcher\'s intuition without evidence'
-            ],
-            correct: 3
+            question: "A good disinfectant must remain active in the presence of:",
+            options: ["Water only", "Pus, blood, and exudates", "Clean surfaces only", "High temperatures"],
+            answer: 1,
+            explanation: "Disinfectants must remain active in the presence of pus, blood, and exudates to be clinically effective."
         }, {
-            id: 33,
-            text: 'The document emphasizes that a research problem must be "narrowed down to a researchable form." This process involves:',
-            options: [
-                'A) Making the problem broader to include more variables',
-                'B) Identifying key variables and making the problem specific enough to study',
-                'C) Eliminating all variables from consideration',
-                'D) Focusing only on ethical considerations'
+            question: "The mechanism of action of antifolate antimalarial drugs is:",
+            options: ["Inhibiting cell wall synthesis", "Inhibiting growth and multiplication of parasites",
+                "Causing neurological paralysis", "Coagulating proteins"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Antifolates inhibit the growth and multiplication of malaria parasites."
         }, {
-            id: 34,
-            text: 'Which of the following criteria is mentioned for evaluating research problems?',
-            options: [
-                'A) The problem must be popular among researchers',
-                'B) The problem must have potential to contribute to the body of knowledge',
-                'C) The problem must guarantee positive results',
-                'D) The problem must be completely new with no prior research'
+            question: "Benzyl benzoate is contraindicated in children because of:",
+            options: ["Its sweet smell", "Neurological symptoms and skin irritation", "High cost",
+                "Low effectiveness"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Benzyl benzoate is contraindicated in children due to neurological symptoms and skin irritation."
         }, {
-            id: 35,
-            text: 'The document states that literature review helps the researcher to "be proactive." This means:',
-            options: [
-                'A) To wait for others to do the work first',
-                'B) To anticipate challenges and build on existing knowledge',
-                'C) To avoid reading previous studies',
-                'D) To focus only on secondary sources'
+            question: "Hydrogen peroxide aids in wound healing by:",
+            options: ["Coagulating proteins", "Liberating oxygen that oxidizes necrotic matter",
+                "Inhibiting protein synthesis", "Preventing bacterial DNA replication"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Hydrogen peroxide liberates oxygen that oxidizes necrotic matter, aiding wound healing."
         }, {
-            id: 36,
-            text: 'A researcher reads a journal article that summarizes findings from multiple original studies. This article is BEST described as a:',
-            options: [
-                'A) Primary source',
-                'B) Secondary source',
-                'C) Tertiary source',
-                'D) Original source'
+            question: "Which of the following characteristics is NOT a property of a good disinfectant?",
+            options: ["Rapid acting", "Non-irritating to tissue", "Staining properties",
+                "Active against pathogens"
             ],
-            correct: 1
+            answer: 2,
+            explanation: "A good disinfectant should be non-staining, not have staining properties."
         }, {
-            id: 37,
-            text: 'When citing more than three authors for the first time in the text, the document advises that you must:',
-            options: [
-                'A) Write only the first author\'s name followed by "et al"',
-                'B) List all the last names of the authors',
-                'C) Omit the citation entirely',
-                'D) Use only the year of publication'
+            question: "Crotamiton differs from permethrin in that crotamiton:",
+            options: ["Has higher cure rate", "Causes less irritation and toxicity",
+                "Is used for bacterial infections", "Requires only one application"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Crotamiton causes less irritation and toxicity compared to permethrin."
         }, {
-            id: 38,
-            text: 'A "pilot study" is conducted PRIMARILY to:',
-            options: [
-                'A) Collect final data for the research',
-                'B) Test the materials and procedures before the main study',
-                'C) Publish preliminary findings',
-                'D) Replace the main study entirely'
-            ],
-            correct: 1
+            question: "Sporozoites in the malaria life cycle are found in:",
+            options: ["Bloodstream", "Liver", "Mosquito saliva", "Gametocytes"],
+            answer: 2,
+            explanation: "Sporozoites are found in the mosquito's saliva and are injected into the host during a bite."
         }, {
-            id: 39,
-            text: 'The document describes "operational definition" as:',
-            options: [
-                'A) The dictionary definition of a term',
-                'B) Defining a concept in terms of the operations or procedures by which it will be measured',
-                'C) A vague description that cannot be measured',
-                'D) A definition that applies only in theoretical contexts'
+            question: "Pasteurization is effective against:",
+            options: ["All microbes including spores", "Non-sporeforming microbes only", "Viruses only",
+                "Fungi only"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Pasteurization kills non-sporeforming microbes using heat (65-100°C)."
         }, {
-            id: 40,
-            text: 'Which of the following is a characteristic of a good hypothesis according to the document?',
-            options: [
-                'A) It must be broad and general',
-                'B) It must be consistent with an established theory',
-                'C) It must guarantee positive results',
-                'D) It should not specify relationships among variables'
+            question: "Amino alcohol antimalarials act on the:",
+            options: ["Sporozoite stage", "Schizont stage",
+                "Erythrocytic stage (merozoites and trophozoites)", "Gametocyte stage only"
             ],
-            correct: 1
+            answer: 2,
+            explanation: "Amino alcohols act on the erythrocytic stage (merozoites and trophozoites)."
         }, {
-            id: 41,
-            text: 'A researcher states: "There is no significant relationship between the level of education and health practice among women in Enugu metropolis." This is an example of a:',
-            options: [
-                'A) Directional hypothesis',
-                'B) Null hypothesis (H₀)',
-                'C) Alternative hypothesis (Hₐ)',
-                'D) Non-directional hypothesis'
-            ],
-            correct: 1
+            question: "Which of the following is a phenol derivative that does not coagulate proteins?",
+            options: ["Phenol", "Cresol", "Chloroxylenol", "Hexachlorophene"],
+            answer: 2,
+            explanation: "Chloroxylenol (Dettol) is a phenol derivative that does not coagulate proteins."
         }, {
-            id: 42,
-            text: 'Which of the following would be considered a directional hypothesis?',
-            options: [
-                'A) There is a relationship between smoking and lung cancer',
-                'B) Cigarette smokers are likely to die younger than non-smokers',
-                'C) There is no relationship between diet and health',
-                'D) Age affects health status'
-            ],
-            correct: 1
+            question: "The application time for permethrin in scabies treatment is:",
+            options: ["1-2 hours", "8-15 hours", "24 hours", "48 hours"],
+            answer: 1,
+            explanation: "Permethrin is applied and left on for 8-15 hours before washing off."
         }, {
-            id: 43,
-            text: 'According to the document, a hypothesis functions to:',
-            options: [
-                'A) Provide the final conclusion of the study',
-                'B) Guide the researcher toward achieving stated objectives',
-                'C) Replace the research problem',
-                'D) Eliminate the need for data collection'
-            ],
-            correct: 1
+            question: "Which stage of the malaria parasite is the sexual stage?",
+            options: ["Sporozoite", "Trophozoite", "Schizont", "Gametocyte"],
+            answer: 3,
+            explanation: "Gametocytes are the sexual stage of the malaria parasite."
         }, {
-            id: 44,
-            text: 'The document identifies "scientific accountability" as important for nursing practice. This is enhanced by:',
-            options: [
-                'A) Ignoring current literature',
-                'B) Reading current literature to keep abreast of issues',
-                'C) Relying solely on clinical experience',
-                'D) Avoiding research findings'
-            ],
-            correct: 1
+            question: "Iodine is effective against:",
+            options: ["Bacteria only", "Fungi only", "Viruses only", "Bacteria, fungi, and viruses (broad spectrum)"],
+            answer: 3,
+            explanation: "Iodine is a broad-spectrum agent effective against bacteria, fungi, and viruses."
         }, {
-            id: 45,
-            text: 'The document states that nursing research helps nurses to accept professional responsibilities by:',
-            options: [
-                'A) Pointing out effectiveness and non-effectiveness of certain practices',
-                'B) Eliminating the need for clinical judgment',
-                'C) Reducing the cost of nursing education',
-                'D) Replacing evidence-based practice with tradition'
+            question: "Active vaccination takes time to build immunity and is similar to:",
+            options: ["Bactericidal antibiotics", "Bacteriostatic antibiotics", "Both A and B",
+                "Neither A nor B"
             ],
-            correct: 0
+            answer: 1,
+            explanation: "Active vaccination is similar to bacteriostatic antibiotics as both take time to work."
         }, {
-            id: 46,
-            text: 'According to the document, which of the following is NOT listed as a goal of nursing research?',
-            options: [
-                'A) Find ways of increasing cost effectiveness of nursing activities',
-                'B) Establish scientific defensive reasoning for all nursing activities',
-                'C) Increase nurses\' salaries',
-                'D) Discover evidence of weakness and strength in nursing'
-            ],
-            correct: 2
+            question: "What is the correct dilution of potassium permanganate for use as Condy's lotion?",
+            options: ["1:10", "1:100", "1:400 to 1:1000", "1:10,000"],
+            answer: 2,
+            explanation: "Condy's lotion is a diluted solution of potassium permanganate at 1:400 to 1:1000."
         }, {
-            id: 47,
-            text: 'The document identifies "social relevance" as important for nursing because:',
-            options: [
-                'A) Health is a right and not a privilege',
-                'B) Nurses need to be popular',
-                'C) Research should be conducted in isolation',
-                'D) Social media is important for nursing'
-            ],
-            correct: 0
+            question: "Which of the following is NOT a property of a good disinfectant?",
+            options: ["Non-staining", "Active against pathogens", "Corrosive to instruments", "Rapid acting"],
+            answer: 2,
+            explanation: "A good disinfectant should be non-corrosive to instruments."
         }, {
-            id: 48,
-            text: 'The document describes the "reductionism" characteristic of research as:',
-            options: [
-                'A) Sacrificing uniqueness of individual events to identify general relationships',
-                'B) Reducing the sample size to save time',
-                'C) Simplifying research questions beyond recognition',
-                'D) Eliminating all variables from the study'
-            ],
-            correct: 0
+            question: "The merozoite stage of Plasmodium is found in the:",
+            options: ["Liver", "Bloodstream", "Mosquito", "Skin"],
+            answer: 1,
+            explanation: "Merozoites are found in the bloodstream after being released from the liver."
         }, {
-            id: 49,
-            text: 'Which of the following is a limitation of research mentioned in the document?',
-            options: [
-                'A) Too many qualified researchers',
-                'B) Measurement problems in psychological dimensions',
-                'C) Excessive funding',
-                'D) Too much time available'
+            question: "Benzoyl peroxide is effective against acne because it:",
+            options: ["Coagulates skin proteins", "Liberates O₂ which kills bacteria, especially anaerobic",
+                "Inhibits sebum production", "Reduces inflammation"
             ],
-            correct: 1
+            answer: 1,
+            explanation: "Benzoyl peroxide liberates oxygen in the presence of water, killing bacteria, especially anaerobes."
         }, {
-            id: 50,
-            text: 'The document states that research is "replicable and transmissible." This means:',
-            options: [
-                'A) Each study must produce different results',
-                'B) Research can be reported, recorded, and repeated in different settings',
-                'C) Research findings cannot be shared',
-                'D) Research is only valid in the original context'
-            ],
-            correct: 1
+            question: "In the life cycle of Plasmodium, schizonts reproduce in the:",
+            options: ["Heart", "Kidney", "Liver", "Lung"],
+            answer: 2,
+            explanation: "Schizonts reproduce in the liver during the Plasmodium life cycle."
         }];
 
-        // ─── STATE ───
-        const state = {
-            candidateName: '',
-            current: 0,
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  STATE
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        const STATE_KEY = 'cbt_pharma_state';
+        const HISTORY_KEY = 'cbt_pharma_history';
+
+        let state = {
+            name: '',
+            studentId: '',
+            currentQ: 0,
             answers: new Array(QUESTIONS.length).fill(null),
-            submitted: false,
-            timer: 60 * 60, // 60 minutes
-            timerInterval: null,
-            reviewMode: false,
             started: false,
+            submitted: false,
+            startTime: null,
+            timeRemaining: 3600, // seconds
+            timerInterval: null,
         };
 
-        const LETTERS = ['A', 'B', 'C', 'D'];
-        const STORAGE_KEY = 'cbt_history_judith_tough';
+        let history = [];
 
-        // ─── DOM refs ───
-        const $ = (id) => document.getElementById(id);
-        const welcomeOverlay = $('welcomeOverlay');
-        const candidateNameInput = $('candidateName');
-        const startExamBtn = $('startExamBtn');
-        const examUi = $('examUi');
-        const candidateDisplay = $('candidateDisplay');
-        const questionText = $('questionText');
-        const optionsContainer = $('optionsContainer');
-        const qNumBadge = $('qNumBadge');
-        const currentNum = $('currentNum');
-        const totalNum = $('totalNum');
-        const progressBar = $('progressBar');
-        const progressLabel = $('progressLabel');
-        const answeredCount = $('answeredCount');
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  DOM REFS
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        const $ = id => document.getElementById(id);
+        const landing = $('landing');
+        const exam = $('exam');
+        const results = $('results');
+        const candidateName = $('candidateName');
+        const studentId = $('studentId');
+        const startBtn = $('startBtn');
+        const examNameDisplay = $('examNameDisplay');
+        const examIdDisplay = $('examIdDisplay');
+        const progressDisplay = $('progressDisplay');
+        const timerText = $('timerText');
         const timerDisplay = $('timerDisplay');
-        const timerBox = $('timerBox');
-        const paletteGrid = $('paletteGrid');
-        const paletteAnswered = $('paletteAnswered');
+        const examProgressBar = $('examProgressBar');
+        const qNumBadge = $('qNumBadge');
+        const qStatusLabel = $('qStatusLabel');
+        const qText = $('qText');
+        const optionsContainer = $('optionsContainer');
         const prevBtn = $('prevBtn');
         const nextBtn = $('nextBtn');
-        const submitBtn = $('submitBtn');
-        const restartBtn = $('restartBtn');
-        const downloadTxtBtn = $('downloadTxtBtn');
-        const resultsContainer = $('resultsContainer');
-        const scoreNum = $('scoreNum');
-        const resultTitle = $('resultTitle');
-        const resultMessage = $('resultMessage');
-        const correctCount = $('correctCount');
-        const wrongCount = $('wrongCount');
-        const unansweredCount = $('unansweredCount');
-        const historyPanel = $('historyPanel');
-        const historyContent = $('historyContent');
-        const toggleHistoryBtn = $('toggleHistoryBtn');
-        const closeHistoryBtn = $('closeHistoryBtn');
+        const paletteContainer = $('paletteContainer');
+        const paletteStats = $('paletteStats');
+        const submitExamBtn = $('submitExamBtn');
+        const restartExamBtn = $('restartExamBtn');
+        const confirmModal = new bootstrap.Modal($('confirmModal'));
+        const confirmSubmitBtn = $('confirmSubmitBtn');
+        const modalUnansweredCount = $('modalUnansweredCount');
 
-        // ─── Floating hearts generator ───
-        function createHearts() {
-            const container = document.getElementById('heartsBg');
-            const symbols = ['♥', '❤️', '💕', '💖', '💗', '✨'];
-            for (let i = 0; i < 18; i++) {
-                const el = document.createElement('span');
-                el.className = 'heart-float';
-                el.textContent = symbols[i % symbols.length];
-                el.style.left = (Math.random() * 95) + '%';
-                el.style.fontSize = (0.8 + Math.random() * 1.8) + 'rem';
-                el.style.animationDuration = (18 + Math.random() * 22) + 's';
-                el.style.animationDelay = (Math.random() * 20) + 's';
-                container.appendChild(el);
-            }
+        // Results
+        const resultName = $('resultName');
+        const resultId = $('resultId');
+        const resultTime = $('resultTime');
+        const resultStatusBadge = $('resultStatusBadge');
+        const rTotal = $('rTotal');
+        const rCorrect = $('rCorrect');
+        const rIncorrect = $('rIncorrect');
+        const rPercentage = $('rPercentage');
+        const rGrade = $('rGrade');
+        const rAttempted = $('rAttempted');
+        const rUnattempted = $('rUnattempted');
+        const chartCorrect = $('chartCorrect');
+        const chartIncorrect = $('chartIncorrect');
+        const reviewBody = $('reviewBody');
+        const resultSubtext = $('resultSubtext');
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  THEME
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        let dark = localStorage.getItem('cbt_theme') === 'dark';
+        const themeToggle = $('themeToggle');
+        const themeIcon = $('themeIcon');
+
+        function applyTheme() {
+            document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+            themeIcon.className = dark ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+            localStorage.setItem('cbt_theme', dark ? 'dark' : 'light');
         }
-        createHearts();
+        themeToggle.addEventListener('click', () => { dark = !dark;
+            applyTheme(); });
+        applyTheme();
 
-        // ─── History management ───
-        function getHistory() {
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  LOCALSTORAGE
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function saveState() {
             try {
-                const data = localStorage.getItem(STORAGE_KEY);
-                return data ? JSON.parse(data) : [];
-            } catch { return []; }
+                const data = { ...state };
+                data.answers = state.answers.slice();
+                localStorage.setItem(STATE_KEY, JSON.stringify(data));
+            } catch (_) {}
         }
 
-        function saveHistoryEntry(entry) {
-            const history = getHistory();
-            history.push(entry);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STATE_KEY);
+                if (!raw) return null;
+                const data = JSON.parse(raw);
+                if (data.answers && data.answers.length === QUESTIONS.length) {
+                    return data;
+                }
+                return null;
+            } catch (_) { return null; }
         }
 
-        function renderHistory() {
-            const history = getHistory();
-            if (history.length === 0) {
-                historyContent.innerHTML = `<div class="history-empty">No scores recorded yet. Take the exam to see your history.</div>`;
-                return;
-            }
-            let html = `<table class="history-table">
-                <thead><tr><th>#</th><th>Date</th><th>Name</th><th>Score</th><th>Details</th><th>Download</th></tr></thead><tbody>`;
-            history.forEach((entry, index) => {
-                const date = new Date(entry.timestamp);
-                const dateStr = date.toLocaleString();
-                const score = entry.score;
-                const total = entry.total || 50;
-                const pct = Math.round((score / total) * 100);
-                const correct = entry.correct || 0;
-                const wrong = entry.wrong || 0;
-                const unanswered = entry.unanswered || 0;
-                html += `<tr>
-                    <td>${index + 1}</td>
-                    <td>${dateStr}</td>
-                    <td>${entry.name || '—'}</td>
-                    <td><span class="badge-score">${score}/${total} (${pct}%)</span></td>
-                    <td>✅${correct} ❌${wrong} ⏭️${unanswered}</td>
-                    <td><button class="btn-download-history" data-history-index="${index}" aria-label="Download result ${index+1}"><i class="bi bi-download"></i></button></td>
-                </tr>`;
-            });
-            html += `</tbody></table>`;
-            historyContent.innerHTML = html;
-
-            document.querySelectorAll('.btn-download-history').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    const idx = parseInt(this.dataset.historyIndex);
-                    const history = getHistory();
-                    if (history[idx]) {
-                        downloadHistoryResult(history[idx]);
-                    }
-                });
-            });
+        function saveHistory(entry) {
+            try {
+                const raw = localStorage.getItem(HISTORY_KEY);
+                const arr = raw ? JSON.parse(raw) : [];
+                arr.push(entry);
+                if (arr.length > 50) arr.shift();
+                localStorage.setItem(HISTORY_KEY, JSON.stringify(arr));
+                history = arr;
+            } catch (_) {}
         }
 
-        function downloadHistoryResult(entry) {
-            const lines = [];
-            const date = new Date(entry.timestamp);
-            lines.push('═══════════════════════════════════════════');
-            lines.push(`  💕 TOUGH CBT RESULTS – ${entry.name || 'My Love'} (History)`);
-            lines.push('═══════════════════════════════════════════');
-            lines.push(`Date: ${date.toLocaleString()}`);
-            lines.push(`Candidate: ${entry.name || 'Anonymous'}`);
-            lines.push(`Total Questions: ${entry.total || 50}`);
-            lines.push(`Correct:   ${entry.correct || 0}`);
-            lines.push(`Wrong:     ${entry.wrong || 0}`);
-            lines.push(`Unanswered: ${entry.unanswered || 0}`);
-            lines.push(`Score:     ${entry.score}/${entry.total || 50}  (${Math.round((entry.score/(entry.total||50))*100)}%)`);
-            lines.push('');
-            lines.push('─── DETAILED BREAKDOWN ───');
-            if (entry.details && Array.isArray(entry.details)) {
-                entry.details.forEach((d, i) => {
-                    const status = d.status || 'UNKNOWN';
-                    lines.push(`Q${i+1}. ${status}  (Your: ${d.user || '—'} | Correct: ${d.correct || '—'})`);
-                });
-            } else {
-                lines.push('(Detailed answers not available)');
-            }
-            lines.push('');
-            lines.push('─── Archived from history ───');
-            const content = lines.join('\n');
-            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            const fname =
-                `ToughCBT_History_${entry.name?.replace(/\s+/g, '_') || 'anonymous'}_${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}.txt`;
-            a.download = fname;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+        function loadHistory() {
+            try {
+                const raw = localStorage.getItem(HISTORY_KEY);
+                if (raw) history = JSON.parse(raw);
+            } catch (_) { history = []; }
         }
+        loadHistory();
 
-        function toggleHistory() {
-            const isVisible = historyPanel.classList.contains('visible');
-            if (isVisible) {
-                historyPanel.classList.remove('visible');
-            } else {
-                renderHistory();
-                historyPanel.classList.add('visible');
-            }
-        }
-
-        toggleHistoryBtn.addEventListener('click', toggleHistory);
-        closeHistoryBtn.addEventListener('click', () => {
-            historyPanel.classList.remove('visible');
-        });
-
-        // ─── Name input ───
-        candidateNameInput.addEventListener('input', () => {
-            const name = candidateNameInput.value.trim();
-            startExamBtn.disabled = name.length < 2;
-        });
-        candidateNameInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !startExamBtn.disabled) {
-                startExam();
-            }
-        });
-
-        // ─── Start ───
-        startExamBtn.addEventListener('click', startExam);
-
-        function startExam() {
-            const name = candidateNameInput.value.trim();
-            if (name.length < 2) return;
-            state.candidateName = name;
-            candidateDisplay.textContent = '❤️ ' + name;
-            welcomeOverlay.classList.add('hidden');
-            examUi.classList.add('visible');
-            state.started = true;
-            initExam();
-        }
-
-        // ─── Init ───
-        function initExam() {
-            state.current = 0;
-            state.answers.fill(null);
-            state.submitted = false;
-            state.reviewMode = false;
-            state.timer = 60 * 60;
-            resultsContainer.style.display = 'none';
-            submitBtn.style.display = 'inline-flex';
-            totalNum.textContent = QUESTIONS.length;
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  NAVIGATION
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function goToQuestion(index) {
+            if (state.submitted) return;
+            if (index < 0 || index >= QUESTIONS.length) return;
+            state.currentQ = index;
             renderQuestion();
             renderPalette();
-            updateProgress();
-            updateAnsweredCount();
-            startTimer();
-            historyPanel.classList.remove('visible');
+            saveState();
+            // scroll to top on mobile
+            document.querySelector('#exam')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // ─── RENDER ───
         function renderQuestion() {
-            const q = QUESTIONS[state.current];
-            const idx = state.current;
+            const q = QUESTIONS[state.currentQ];
+            const idx = state.currentQ;
             qNumBadge.textContent = `Q${idx + 1}`;
-            currentNum.textContent = idx + 1;
-            questionText.textContent = q.text;
+            qText.textContent = q.question;
 
-            let html = '';
-            q.options.forEach((opt, i) => {
-                const selected = state.answers[idx] === i ? 'selected' : '';
-                const letter = LETTERS[i];
-                html += `
-                        <div class="option-item ${selected}" role="radio" aria-checked="${selected ? 'true' : 'false'}" tabindex="0"
-                             data-optindex="${i}" data-qindex="${idx}">
-                            <span class="letter">${letter}</span>
-                            <span>${opt}</span>
-                            <input type="radio" name="question" value="${i}" ${selected ? 'checked' : ''} />
-                        </div>
-                    `;
-            });
-            optionsContainer.innerHTML = html;
+            const answered = state.answers[idx] !== null;
+            qStatusLabel.textContent = answered ? '✅ Answered' : '⏳ Unanswered';
+            qStatusLabel.style.color = answered ? 'var(--success)' : 'var(--danger)';
 
-            document.querySelectorAll('.option-item').forEach(el => {
-                el.addEventListener('click', onOptionClick);
-                el.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        onOptionClick.call(el, e);
-                    }
+            // options
+            optionsContainer.innerHTML = '';
+            q.options.forEach((opt, oi) => {
+                const label = document.createElement('label');
+                label.className = 'option-label';
+                if (state.answers[idx] === oi) label.classList.add('selected');
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'questionOption';
+                radio.value = oi;
+                radio.checked = state.answers[idx] === oi;
+                radio.addEventListener('change', () => {
+                    state.answers[idx] = oi;
+                    renderQuestion();
+                    renderPalette();
+                    saveState();
                 });
+                const span = document.createElement('span');
+                span.textContent = `${String.fromCharCode(65 + oi)}. ${opt}`;
+                label.appendChild(radio);
+                label.appendChild(span);
+                optionsContainer.appendChild(label);
             });
 
-            if (state.reviewMode) {
-                const qData = QUESTIONS[idx];
-                const selected = state.answers[idx];
-                document.querySelectorAll('.option-item').forEach((el, i) => {
-                    if (i === qData.correct) {
-                        el.classList.add('correct-reveal');
-                    } else if (selected !== null && i === selected && i !== qData.correct) {
-                        el.classList.add('wrong-reveal');
-                    }
-                });
-            }
+            // update nav buttons
+            prevBtn.disabled = idx === 0;
+            nextBtn.textContent = idx === QUESTIONS.length - 1 ? 'Finish' : 'Next';
+            nextBtn.innerHTML = idx === QUESTIONS.length - 1 ?
+                '<i class="bi bi-check2-circle me-1"></i> Finish' :
+                'Next <i class="bi bi-chevron-right ms-1"></i>';
 
-            document.querySelectorAll('.palette-btn').forEach((btn, i) => {
-                btn.classList.toggle('active-q', i === idx);
-            });
-        }
-
-        function onOptionClick(e) {
-            if (state.submitted || state.reviewMode) return;
-            const el = e.currentTarget;
-            const qIdx = parseInt(el.dataset.qindex);
-            const optIdx = parseInt(el.dataset.optindex);
-            if (state.answers[qIdx] === optIdx) {
-                state.answers[qIdx] = null;
-            } else {
-                state.answers[qIdx] = optIdx;
-            }
-            renderQuestion();
-            renderPalette();
-            updateProgress();
-            updateAnsweredCount();
+            // progress
+            const answeredCount = state.answers.filter(a => a !== null).length;
+            progressDisplay.textContent = `${answeredCount} / ${QUESTIONS.length}`;
+            examProgressBar.style.width = `${(answeredCount / QUESTIONS.length) * 100}%`;
         }
 
         function renderPalette() {
-            let html = '';
-            QUESTIONS.forEach((q, i) => {
-                const answered = state.answers[i] !== null;
-                const active = i === state.current;
-                let cls = 'palette-btn';
-                if (active) cls += ' active-q';
-                if (answered) cls += ' answered';
-                html += `<button class="${cls}" data-qidx="${i}" aria-label="Go to question ${i+1}" role="listitem">${i+1}</button>`;
-            });
-            paletteGrid.innerHTML = html;
-            paletteGrid.querySelectorAll('.palette-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (state.submitted) return;
-                    const idx = parseInt(btn.dataset.qidx);
-                    state.current = idx;
-                    renderQuestion();
-                    renderPalette();
-                    updateProgress();
-                });
-            });
-            const answeredTotal = state.answers.filter(a => a !== null).length;
-            paletteAnswered.textContent = answeredTotal;
+            const answeredCount = state.answers.filter(a => a !== null).length;
+            paletteStats.textContent = `${answeredCount} answered`;
+
+            paletteContainer.innerHTML = '';
+            for (let i = 0; i < QUESTIONS.length; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'palette-btn';
+                btn.textContent = i + 1;
+                btn.setAttribute('role', 'listitem');
+                btn.setAttribute('aria-label', `Question ${i+1}`);
+
+                if (state.answers[i] !== null) btn.classList.add('answered');
+                else btn.classList.add('unanswered');
+
+                if (i === state.currentQ) btn.classList.add('current');
+
+                btn.addEventListener('click', () => goToQuestion(i));
+                paletteContainer.appendChild(btn);
+            }
         }
 
-        function updateProgress() {
-            const total = QUESTIONS.length;
-            const answered = state.answers.filter(a => a !== null).length;
-            const pct = total > 0 ? Math.round((answered / total) * 100) : 0;
-            progressBar.style.width = pct + '%';
-            progressBar.setAttribute('aria-valuenow', pct);
-            progressLabel.innerHTML =
-                `Question <strong>${state.current + 1}</strong> of <strong>${total}</strong>`;
-            answeredCount.textContent = `${answered} answered`;
-        }
-
-        function updateAnsweredCount() {
-            const answered = state.answers.filter(a => a !== null).length;
-            paletteAnswered.textContent = answered;
-            answeredCount.textContent = `${answered} answered`;
-        }
-
-        // ─── TIMER ───
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  TIMER
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         function startTimer() {
             if (state.timerInterval) clearInterval(state.timerInterval);
-            updateTimerDisplay();
             state.timerInterval = setInterval(() => {
-                if (state.submitted) {
-                    clearInterval(state.timerInterval);
-                    return;
-                }
-                state.timer--;
+                state.timeRemaining--;
                 updateTimerDisplay();
-                if (state.timer <= 0) {
+                if (state.timeRemaining <= 0) {
                     clearInterval(state.timerInterval);
+                    state.timerInterval = null;
                     autoSubmit();
                 }
+                saveState();
             }, 1000);
         }
 
         function updateTimerDisplay() {
-            const mins = Math.floor(state.timer / 60);
-            const secs = state.timer % 60;
-            timerDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-            timerBox.classList.remove('warning', 'danger');
-            if (state.timer <= 60) {
-                timerBox.classList.add('danger');
-            } else if (state.timer <= 300) {
-                timerBox.classList.add('warning');
+            const m = Math.floor(state.timeRemaining / 60);
+            const s = state.timeRemaining % 60;
+            timerText.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+            if (state.timeRemaining < 60) {
+                timerDisplay.classList.add('warning');
+            } else {
+                timerDisplay.classList.remove('warning');
             }
-            timerBox.setAttribute('aria-label', `Time remaining ${mins} minutes and ${secs} seconds`);
         }
 
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  AUTO-SUBMIT
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         function autoSubmit() {
             if (state.submitted) return;
             state.submitted = true;
-            clearInterval(state.timerInterval);
-            showResults();
+            if (state.timerInterval) { clearInterval(state.timerInterval);
+                state.timerInterval = null; }
+            computeAndShowResults();
         }
 
-        // ─── SUBMIT ───
-        function handleSubmit() {
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  MANUAL SUBMIT
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        submitExamBtn.addEventListener('click', () => {
+            if (state.submitted) return;
+            const unanswered = state.answers.filter(a => a === null).length;
+            modalUnansweredCount.textContent = unanswered;
+            confirmModal.show();
+        });
+
+        confirmSubmitBtn.addEventListener('click', () => {
+            confirmModal.hide();
             if (state.submitted) return;
             state.submitted = true;
-            clearInterval(state.timerInterval);
-            showResults();
-        }
+            if (state.timerInterval) { clearInterval(state.timerInterval);
+                state.timerInterval = null; }
+            computeAndShowResults();
+        });
 
-        // ─── RESULTS ───
-        function showResults() {
-            state.reviewMode = true;
-            document.querySelector('.exam-header').style.display = 'none';
-            document.querySelector('.progress-track').style.display = 'none';
-            document.querySelector('.nav-buttons').style.display = 'none';
-            document.querySelector('.palette-section').style.display = 'none';
-            submitBtn.style.display = 'none';
-
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  RESULTS
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function computeAndShowResults() {
+            const total = QUESTIONS.length;
             let correct = 0,
-                wrong = 0,
-                unanswered = 0;
+                attempted = 0;
             const details = [];
-            QUESTIONS.forEach((q, i) => {
-                const ans = state.answers[i];
-                const userLetter = ans !== null ? LETTERS[ans] : '—';
-                const correctLetter = LETTERS[q.correct];
-                let status = 'UNANSWERED';
-                if (ans === null) {
-                    unanswered++;
-                } else if (ans === q.correct) {
-                    correct++;
-                    status = '✅ CORRECT';
-                } else {
-                    wrong++;
-                    status = '❌ WRONG';
+
+            for (let i = 0; i < total; i++) {
+                const userAns = state.answers[i];
+                const correctAns = QUESTIONS[i].answer;
+                const isCorrect = userAns === correctAns;
+                if (userAns !== null) {
+                    attempted++;
+                    if (isCorrect) correct++;
                 }
-                details.push({ user: userLetter, correct: correctLetter, status: status });
+                details.push({
+                    index: i,
+                    userAns,
+                    correctAns,
+                    isCorrect: userAns !== null && isCorrect,
+                    isWrong: userAns !== null && !isCorrect,
+                    isUnanswered: userAns === null,
+                    question: QUESTIONS[i].question,
+                    options: QUESTIONS[i].options,
+                    explanation: QUESTIONS[i].explanation || '—',
+                });
+            }
+
+            const incorrect = attempted - correct;
+            const unattempted = total - attempted;
+            const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+            const grade = percentage >= 80 ? 'A' : percentage >= 65 ? 'B' : percentage >= 50 ? 'C' : percentage >= 40 ? 'D' :
+                'F';
+            const passed = percentage >= 40;
+
+            const timeUsed = 3600 - state.timeRemaining;
+            const mins = Math.floor(timeUsed / 60);
+            const secs = timeUsed % 60;
+            const timeStr = `${mins}m ${secs}s`;
+
+            // Build result entry
+            const entry = {
+                name: state.name,
+                studentId: state.studentId || '—',
+                date: new Date().toISOString(),
+                timeUsed: timeStr,
+                total,
+                correct,
+                incorrect,
+                unattempted,
+                attempted,
+                percentage,
+                grade,
+                passed,
+                answers: state.answers.slice(),
+                details,
+            };
+
+            // Save history
+            saveHistory(entry);
+
+            // Display
+            exam.classList.add('hidden');
+            results.classList.remove('hidden');
+
+            resultName.textContent = state.name || '—';
+            resultId.textContent = state.studentId || '—';
+            resultTime.textContent = timeStr;
+            resultStatusBadge.textContent = passed ? '✅ Pass' : '❌ Fail';
+            resultStatusBadge.className = `result-badge ${passed ? 'pass' : 'fail'}`;
+
+            rTotal.textContent = total;
+            rCorrect.textContent = correct;
+            rIncorrect.textContent = incorrect;
+            rPercentage.textContent = `${percentage}%`;
+            rGrade.textContent = grade;
+            rAttempted.textContent = attempted;
+            rUnattempted.textContent = unattempted;
+
+            // Charts
+            const maxVal = Math.max(correct, incorrect, 1);
+            chartCorrect.style.width = `${(correct / maxVal) * 100}%`;
+            chartIncorrect.style.width = `${(incorrect / maxVal) * 100}%`;
+
+            // Review table
+            reviewBody.innerHTML = '';
+            details.forEach((d, idx) => {
+                const tr = document.createElement('tr');
+                const statusIcon = d.isCorrect ? '✅' : d.isWrong ? '❌' : '⬜';
+                const statusText = d.isCorrect ? 'Correct' : d.isWrong ? 'Wrong' : 'Unanswered';
+                const userLetter = d.userAns !== null ? String.fromCharCode(65 + d.userAns) : '—';
+                const correctLetter = String.fromCharCode(65 + d.correctAns);
+                tr.innerHTML = `
+              <td>${idx+1}</td>
+              <td>${userLetter}</td>
+              <td>${correctLetter}</td>
+              <td><span class="badge ${d.isCorrect ? 'bg-success' : d.isWrong ? 'bg-danger' : 'bg-secondary'}">${statusIcon} ${statusText}</span></td>
+              <td class="text-muted small">${d.explanation}</td>
+            `;
+                reviewBody.appendChild(tr);
             });
 
-            scoreNum.textContent = correct;
-            correctCount.textContent = correct;
-            wrongCount.textContent = wrong;
-            unansweredCount.textContent = unanswered;
+            resultSubtext.textContent = `Pharmacology · Set 20 · ${state.name}`;
 
-            const pct = Math.round((correct / QUESTIONS.length) * 100);
-            let msg = '';
-            if (pct >= 80) msg = '💖 You\'re a genius! I\'m so lucky to have you. Forgive me?';
-            else if (pct >= 60) msg = '💕 Great job, love! Those were tough questions!';
-            else if (pct >= 40) msg = '🌸 Not bad at all! Tough exam, but you did well.';
-            else msg = '💗 I know it was hard, but you\'re still my everything. Let\'s try again?';
-            resultMessage.textContent = msg;
+            // Scroll to results
+            results.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            resultsContainer.style.display = 'block';
+            // Clear exam state from storage
+            localStorage.removeItem(STATE_KEY);
+        }
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  START TEST
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function startTest(name, id) {
+            state.name = name.trim();
+            state.studentId = id.trim();
+            state.currentQ = 0;
+            state.answers = new Array(QUESTIONS.length).fill(null);
+            state.started = true;
+            state.submitted = false;
+            state.startTime = Date.now();
+            state.timeRemaining = 3600;
+
+            landing.classList.add('hidden');
+            exam.classList.remove('hidden');
+            results.classList.add('hidden');
+
+            examNameDisplay.textContent = `Candidate: ${state.name}`;
+            examIdDisplay.textContent = state.studentId ? `(${state.studentId})` : '';
+
             renderQuestion();
             renderPalette();
-            progressBar.style.width = '100%';
-            progressBar.setAttribute('aria-valuenow', 100);
-
-            // Save to history
-            const entry = {
-                name: state.candidateName,
-                timestamp: Date.now(),
-                score: correct,
-                total: QUESTIONS.length,
-                correct: correct,
-                wrong: wrong,
-                unanswered: unanswered,
-                details: details
-            };
-            saveHistoryEntry(entry);
+            updateTimerDisplay();
+            startTimer();
+            saveState();
         }
 
-        // ─── DOWNLOAD CURRENT RESULTS ───
-        function downloadCurrentResults() {
-            const lines = [];
-            const now = new Date();
-            const dateStr = now.toLocaleString();
-            lines.push('═══════════════════════════════════════════');
-            lines.push(`  💕 TOUGH CBT RESULTS – ${state.candidateName || 'My Love'}`);
-            lines.push('═══════════════════════════════════════════');
-            lines.push(`Date: ${dateStr}`);
-            lines.push(`Candidate: ${state.candidateName || 'Anonymous'}`);
-            lines.push(`Total Questions: ${QUESTIONS.length}`);
-            const correct = parseInt(correctCount.textContent);
-            const wrong = parseInt(wrongCount.textContent);
-            const unanswered = parseInt(unansweredCount.textContent);
-            lines.push(`Correct:   ${correct}`);
-            lines.push(`Wrong:     ${wrong}`);
-            lines.push(`Unanswered: ${unanswered}`);
-            const pct = Math.round((correct / QUESTIONS.length) * 100);
-            lines.push(`Score:     ${correct}/${QUESTIONS.length}  (${pct}%)`);
-            lines.push('');
-            lines.push('─── DETAILED BREAKDOWN ───');
-            QUESTIONS.forEach((q, i) => {
-                const ans = state.answers[i];
-                const userLetter = ans !== null ? LETTERS[ans] : '—';
-                const correctLetter = LETTERS[q.correct];
-                const status = ans === null ? 'UNANSWERED' :
-                    (ans === q.correct ? '✅ CORRECT' : '❌ WRONG');
-                lines.push(`Q${i+1}. ${status}  (Your: ${userLetter} | Correct: ${correctLetter})`);
-            });
-            lines.push('');
-            lines.push('─── With love and apologies ❤️ ───');
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  LANDING FORM
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        landingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = candidateName.value.trim();
+            if (!name) {
+                candidateName.classList.add('is-invalid');
+                candidateName.focus();
+                return;
+            }
+            candidateName.classList.remove('is-invalid');
+            const id = studentId.value.trim();
+            startTest(name, id);
+        });
 
-            const content = lines.join('\n');
-            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  PREV / NEXT
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        prevBtn.addEventListener('click', () => {
+            if (state.currentQ > 0) goToQuestion(state.currentQ - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (state.currentQ < QUESTIONS.length - 1) {
+                goToQuestion(state.currentQ + 1);
+            } else {
+                // Finish → submit
+                if (!state.submitted) {
+                    const unanswered = state.answers.filter(a => a === null).length;
+                    if (unanswered > 0) {
+                        modalUnansweredCount.textContent = unanswered;
+                        confirmModal.show();
+                    } else {
+                        // auto-submit if all answered
+                        state.submitted = true;
+                        if (state.timerInterval) { clearInterval(state.timerInterval);
+                            state.timerInterval = null; }
+                        computeAndShowResults();
+                    }
+                }
+            }
+        });
+
+        // Keyboard: left/right arrows
+        document.addEventListener('keydown', (e) => {
+            if (exam.classList.contains('hidden') || state.submitted) return;
+            if (e.key === 'ArrowLeft') { e.preventDefault();
+                prevBtn.click(); }
+            if (e.key === 'ArrowRight') { e.preventDefault();
+                nextBtn.click(); }
+        });
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  RESTART
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function restartTest() {
+            if (state.timerInterval) { clearInterval(state.timerInterval);
+                state.timerInterval = null; }
+            state.started = false;
+            state.submitted = false;
+            state.answers = new Array(QUESTIONS.length).fill(null);
+            state.currentQ = 0;
+            state.timeRemaining = 3600;
+            localStorage.removeItem(STATE_KEY);
+            exam.classList.add('hidden');
+            results.classList.add('hidden');
+            landing.classList.remove('hidden');
+            candidateName.value = state.name || '';
+            studentId.value = state.studentId || '';
+            candidateName.focus();
+            // reset timer display
+            updateTimerDisplay();
+            timerDisplay.classList.remove('warning');
+        }
+
+        restartExamBtn.addEventListener('click', () => {
+            if (confirm('Restart the test? All current progress will be lost.')) {
+                restartTest();
+            }
+        });
+
+        $('restartFromResultBtn').addEventListener('click', () => {
+            if (confirm('Restart the test? Your result will be cleared.')) {
+                restartTest();
+            }
+        });
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  CLEAR HISTORY
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        $('clearHistoryBtn').addEventListener('click', () => {
+            if (confirm('Clear all saved test history?')) {
+                localStorage.removeItem(HISTORY_KEY);
+                history = [];
+                alert('History cleared.');
+            }
+        });
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  PRINT / PDF / JSON
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        $('printResultBtn').addEventListener('click', () => window.print());
+
+        $('pdfResultBtn').addEventListener('click', () => {
+            // Use window.print() with "Save as PDF" — user can choose PDF from print dialog
+            window.print();
+        });
+
+        $('jsonResultBtn').addEventListener('click', () => {
+            // Gather current result data from the DOM
+            const name = resultName.textContent;
+            const id = resultId.textContent;
+            const time = resultTime.textContent;
+            const total = parseInt(rTotal.textContent);
+            const correct = parseInt(rCorrect.textContent);
+            const incorrect = parseInt(rIncorrect.textContent);
+            const percentage = parseInt(rPercentage.textContent);
+            const grade = rGrade.textContent;
+            const passed = resultStatusBadge.textContent.includes('Pass');
+            const attempted = parseInt(rAttempted.textContent);
+            const unattempted = parseInt(rUnattempted.textContent);
+
+            // Get review data
+            const rows = reviewBody.querySelectorAll('tr');
+            const details = [];
+            rows.forEach(tr => {
+                const td = tr.querySelectorAll('td');
+                if (td.length >= 5) {
+                    details.push({
+                        q: parseInt(td[0].textContent),
+                        user: td[1].textContent,
+                        correct: td[2].textContent,
+                        status: td[3].textContent.trim(),
+                        explanation: td[4].textContent
+                    });
+                }
+            });
+
+            const payload = {
+                exam: 'Pharmacology Set 20',
+                candidate: name,
+                studentId: id,
+                timeUsed: time,
+                date: new Date().toISOString(),
+                total,
+                correct,
+                incorrect,
+                attempted,
+                unattempted,
+                percentage,
+                grade,
+                passed,
+                details
+            };
+
+            const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download =
-                `ToughCBT_Results_${state.candidateName.replace(/\s+/g, '_')}_${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}.txt`;
-            document.body.appendChild(a);
+            a.download = `pharma_result_${name.replace(/\s+/g,'_')}.json`;
             a.click();
-            document.body.removeChild(a);
             URL.revokeObjectURL(url);
-        }
-
-        downloadTxtBtn.addEventListener('click', downloadCurrentResults);
-
-        // ─── RESTART ───
-        function restartExam() {
-            if (state.timerInterval) clearInterval(state.timerInterval);
-            state.answers.fill(null);
-            state.submitted = false;
-            state.reviewMode = false;
-            state.timer = 60 * 60;
-            resultsContainer.style.display = 'none';
-            document.querySelector('.exam-header').style.display = 'flex';
-            document.querySelector('.progress-track').style.display = 'block';
-            document.querySelector('.nav-buttons').style.display = 'flex';
-            document.querySelector('.palette-section').style.display = 'block';
-            submitBtn.style.display = 'inline-flex';
-            state.current = 0;
-            renderQuestion();
-            renderPalette();
-            updateProgress();
-            updateAnsweredCount();
-            startTimer();
-            document.querySelectorAll('.option-item').forEach(el => {
-                el.classList.remove('correct-reveal', 'wrong-reveal');
-            });
-            historyPanel.classList.remove('visible');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        restartBtn.addEventListener('click', restartExam);
-
-        // ─── NAV ───
-        function goPrev() {
-            if (state.submitted) return;
-            if (state.current > 0) {
-                state.current--;
-                renderQuestion();
-                renderPalette();
-                updateProgress();
-            }
-        }
-
-        function goNext() {
-            if (state.submitted) return;
-            if (state.current < QUESTIONS.length - 1) {
-                state.current++;
-                renderQuestion();
-                renderPalette();
-                updateProgress();
-            }
-        }
-
-        prevBtn.addEventListener('click', goPrev);
-        nextBtn.addEventListener('click', goNext);
-        submitBtn.addEventListener('click', handleSubmit);
-
-        // ─── KEYBOARD ───
-        document.addEventListener('keydown', (e) => {
-            if (!state.started || state.submitted) return;
-            const num = parseInt(e.key);
-            if (num >= 1 && num <= 4) {
-                const optItems = document.querySelectorAll('.option-item');
-                if (optItems[num - 1]) {
-                    e.preventDefault();
-                    optItems[num - 1].click();
-                }
-            }
-            if (e.key === 'ArrowLeft') { e.preventDefault();
-                goPrev(); }
-            if (e.key === 'ArrowRight') { e.preventDefault();
-                goNext(); }
         });
 
-        // ─── READY ───
-        examUi.classList.remove('visible');
-        console.log('💖 Tough CBT Exam loaded – 50 challenging questions for Peter Ifeoma Judith! 💖');
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  RESTORE SESSION ON LOAD
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        function restoreSession() {
+            const saved = loadState();
+            if (saved && saved.started && !saved.submitted) {
+                // Check if it's still valid (within 1 hour)
+                const elapsed = (Date.now() - (saved.startTime || 0)) / 1000;
+                if (elapsed < 3600) {
+                    state = saved;
+                    state.timeRemaining = Math.max(0, 3600 - Math.floor(elapsed));
+                    state.timerInterval = null;
+                    // Resume
+                    landing.classList.add('hidden');
+                    exam.classList.remove('hidden');
+                    results.classList.add('hidden');
+                    examNameDisplay.textContent = `Candidate: ${state.name}`;
+                    examIdDisplay.textContent = state.studentId ? `(${state.studentId})` : '';
+                    renderQuestion();
+                    renderPalette();
+                    updateTimerDisplay();
+                    startTimer();
+                    return true;
+                } else {
+                    // Expired — auto-submit
+                    state = saved;
+                    state.submitted = true;
+                    state.timeRemaining = 0;
+                    if (state.timerInterval) { clearInterval(state.timerInterval);
+                        state.timerInterval = null; }
+                    computeAndShowResults();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Try to restore
+        if (!restoreSession()) {
+            // If there's a name in state, pre-fill
+            const saved = loadState();
+            if (saved && saved.name) {
+                candidateName.value = saved.name;
+                studentId.value = saved.studentId || '';
+            }
+        }
+
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        //  Motion One Entrance Animations
+        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        (async function animateEntrance() {
+            const { animate } = window.Motion;
+            if (!animate) return;
+            try {
+                await animate('#landing', { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, easing: 'ease-out' });
+            } catch (_) {}
+        })();
+
+        console.log('🕊️ ESUT CBT · Pharmacology Set 20 loaded.');
+        console.log(`📝 ${QUESTIONS.length} questions ready.`);
     </script>
+
 </body>
 </html>
